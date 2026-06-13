@@ -1140,7 +1140,7 @@
             "D": "Good Health and Well-being"
           },
           "correct": "B",
-          "correct_detail": "SDG 1: No Poverty"
+          "correct_detail": "SDG 1: No Poverty - End poverty in all its forms everywhere"
         },
         {
           "id": "C3Q22",
@@ -1152,7 +1152,7 @@
             "D": "Gender Equality"
           },
           "correct": "C",
-          "correct_detail": "SDG 2: Zero Hunger"
+          "correct_detail": "SDG 2: Zero Hunger - End hunger, achieve food security and improved nutrition"
         },
         {
           "id": "C3Q23",
@@ -1164,7 +1164,7 @@
             "D": "Climate Action"
           },
           "correct": "B",
-          "correct_detail": "SDG 3: Good Health and Well-being"
+          "correct_detail": "SDG 3: Good Health and Well-being - Ensure healthy lives and promote well-being for all at all ages"
         },
         {
           "id": "C3Q24",
@@ -1176,7 +1176,7 @@
             "D": "Quality Education"
           },
           "correct": "D",
-          "correct_detail": "SDG 4: Quality Education"
+          "correct_detail": "SDG 4: Quality Education - Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all"
         },
         {
           "id": "C3Q25",
@@ -1188,7 +1188,7 @@
             "D": "Climate Action"
           },
           "correct": "C",
-          "correct_detail": "SDG 5: Gender Equality"
+          "correct_detail": "SDG 5: Gender Equality - Achieve gender equality and empower all women and girls"
         },
         {
           "id": "C3Q26",
@@ -1200,7 +1200,7 @@
             "D": "Clean Water and Sanitation"
           },
           "correct": "D",
-          "correct_detail": "SDG 6: Clean Water and Sanitation"
+          "correct_detail": "SDG 6: Clean Water and Sanitation - Ensure availability and sustainable management of water and sanitation for all"
         },
         {
           "id": "C3Q27",
@@ -1212,7 +1212,7 @@
             "D": "Peace, Justice and Strong Institutions"
           },
           "correct": "C",
-          "correct_detail": "Climate Action (relevant to health via vector spread, heatwaves, air quality)"
+          "correct_detail": "SDG 13: Climate Action - Take urgent action to combat climate change and its impacts"
         },
         {
           "id": "C3Q28",
