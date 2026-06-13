@@ -14,7 +14,7 @@
             "D": "Arctic Ocean"
           },
           "correct": "C",
-          "correct_detail": "The Pacific Ocean is the largest ocean on Earth, covering about 165 million km² — more than all the world's landmasses combined. It spans from the Arctic in the north to the Antarctic in the south."
+          "correct_detail": "Pacific Ocean — largest ocean on Earth, covering about one-third of the planet's surface"
         },
         {
           "id": "C1Q2",
@@ -26,7 +26,7 @@
             "D": "Nile"
           },
           "correct": "D",
-          "correct_detail": "The Nile River (~6,650 km) is traditionally regarded as the world's longest river, flowing northward through northeastern Africa into the Mediterranean Sea. (The Amazon is sometimes cited as longer depending on measurement method.)"
+          "correct_detail": "Nile River — traditionally regarded as the world's longest river"
         },
         {
           "id": "C1Q3",
@@ -38,7 +38,7 @@
             "D": "Europe"
           },
           "correct": "B",
-          "correct_detail": "Asia is the largest continent by area (~44.6 million km²) and also the most populous, home to over 60% of the world's population."
+          "correct_detail": "Asia — largest continent by land area and population"
         },
         {
           "id": "C1Q4",
@@ -50,7 +50,7 @@
             "D": "Vatican City"
           },
           "correct": "D",
-          "correct_detail": "Vatican City, an independent city-state within Rome, is the smallest sovereign state in the world at only ~0.44 km²."
+          "correct_detail": "Vatican City — smallest sovereign state in the world"
         },
         {
           "id": "C1Q5",
@@ -62,7 +62,7 @@
             "D": "Tonga Trench"
           },
           "correct": "C",
-          "correct_detail": "The Challenger Deep in the Mariana Trench (western Pacific Ocean) is Earth's deepest point, approximately 11,000 m below sea level."
+          "correct_detail": "Mariana Trench (Pacific Ocean)"
         },
         {
           "id": "C1Q6",
@@ -74,7 +74,7 @@
             "D": "Antarctica"
           },
           "correct": "D",
-          "correct_detail": "Antarctica is the largest desert overall (~14 million km²) because a desert is defined by low precipitation, not heat. The Sahara is the largest hot desert (~9 million km²)."
+          "correct_detail": "Antarctica (overall); Sahara (largest hot desert)"
         },
         {
           "id": "C1Q7",
@@ -86,7 +86,7 @@
             "D": "Mount Everest"
           },
           "correct": "D",
-          "correct_detail": "Mount Everest, on the Nepal–China border in the Himalayas, is the tallest mountain above sea level at 8,849 m."
+          "correct_detail": "Mount Everest — highest mountain above sea level (8,849 m)"
         },
         {
           "id": "C1Q8",
@@ -98,7 +98,7 @@
             "D": "Southern Ocean"
           },
           "correct": "C",
-          "correct_detail": "The Indian Ocean lies between Africa and Australia. It is the third-largest ocean and borders South Asia, East Africa, and the Middle East."
+          "correct_detail": "Indian Ocean"
         },
         {
           "id": "C1Q9",
@@ -110,7 +110,7 @@
             "D": "Canberra"
           },
           "correct": "D",
-          "correct_detail": "Canberra is the capital of Australia — a common trick question since Sydney and Melbourne are larger cities but were bypassed when the capital was established in 1913."
+          "correct_detail": "Canberra — capital city of Australia"
         },
         {
           "id": "C1Q10",
@@ -122,7 +122,7 @@
             "D": "Montreal"
           },
           "correct": "C",
-          "correct_detail": "Ottawa, located in the province of Ontario, is the capital of Canada — not Toronto (Ontario's largest city) or Montreal."
+          "correct_detail": "Ottawa — capital city of Canada"
         },
         {
           "id": "C1Q11",
@@ -134,7 +134,7 @@
             "D": "Brasília"
           },
           "correct": "D",
-          "correct_detail": "Brasília is the capital of Brazil, a planned city inaugurated in 1960. Rio de Janeiro was the former capital; São Paulo is the largest city — neither is the capital."
+          "correct_detail": "Brasília — capital city of Brazil"
         },
         {
           "id": "C1Q12",
@@ -146,7 +146,7 @@
             "D": "Hiroshima"
           },
           "correct": "C",
-          "correct_detail": "Tokyo is the capital and most populous city of Japan, serving as the country's economic, political, and cultural center."
+          "correct_detail": "Tokyo — capital city of Japan"
         },
         {
           "id": "C1Q13",
@@ -158,7 +158,7 @@
             "D": "Pretoria"
           },
           "correct": "D",
-          "correct_detail": "South Africa has three capitals: Pretoria (administrative/executive), Cape Town (legislative/parliamentary), and Bloemfontein (judicial). The question specifically asks about the administrative capital, which is Pretoria."
+          "correct_detail": "Pretoria (administrative), Cape Town (legislative), Bloemfontein (judicial)"
         },
         {
           "id": "C1Q14",
@@ -170,7 +170,7 @@
             "D": "Robert Koch"
           },
           "correct": "B",
-          "correct_detail": "Alexander Fleming discovered penicillin in 1928 when he noticed that the mould Penicillium notatum was killing bacteria on a culture plate. This discovery revolutionized medicine and led to the antibiotic era."
+          "correct_detail": "Alexander Fleming — discovered penicillin in 1928"
         },
         {
           "id": "C1Q15",
@@ -182,7 +182,7 @@
             "D": "110°C"
           },
           "correct": "C",
-          "correct_detail": "Water boils at 100°C (212°F) at standard atmospheric pressure (1 atm / sea level). At higher altitudes where pressure is lower, water boils at a lower temperature."
+          "correct_detail": "100°C at standard atmospheric pressure (sea level)"
         },
         {
           "id": "C1Q16",
@@ -194,7 +194,7 @@
             "D": "10°C"
           },
           "correct": "B",
-          "correct_detail": "Water freezes at 0°C (32°F) at standard atmospheric pressure. Below 0°C, water transitions from liquid to solid (ice)."
+          "correct_detail": "0°C at standard atmospheric pressure"
         },
         {
           "id": "C1Q17",
@@ -206,7 +206,7 @@
             "D": "3,000,000 km/s"
           },
           "correct": "C",
-          "correct_detail": "The speed of light in a vacuum is approximately 299,792 km/s, commonly rounded to 300,000 km/s. Nothing in the universe travels faster than light."
+          "correct_detail": "Approximately 300,000 km/s in a vacuum"
         },
         {
           "id": "C1Q18",
@@ -218,7 +218,7 @@
             "D": "Saturn"
           },
           "correct": "D",
-          "correct_detail": "As of 2024, Saturn has the most confirmed moons of any planet — 146 — surpassing Jupiter. Saturn's moons vary greatly in size, from tiny moonlets to the large Titan."
+          "correct_detail": "Saturn currently has the highest number of confirmed moons"
         },
         {
           "id": "C1Q19",
@@ -230,7 +230,7 @@
             "D": "Mercury"
           },
           "correct": "D",
-          "correct_detail": "Mercury is the closest planet to the Sun, orbiting at an average distance of ~58 million km. Despite being closest to the Sun, it is not the hottest planet (Venus is, due to its thick atmosphere)."
+          "correct_detail": "Mercury — closest planet to the Sun"
         },
         {
           "id": "C1Q20",
@@ -242,7 +242,7 @@
             "D": "Ozone"
           },
           "correct": "B",
-          "correct_detail": "Oxygen has the chemical symbol 'O' and atomic number 8. It makes up approximately 21% of Earth's atmosphere and is essential for cellular respiration."
+          "correct_detail": "Oxygen (chemical symbol O)"
         },
         {
           "id": "C1Q21",
@@ -254,7 +254,7 @@
             "D": "Diamond"
           },
           "correct": "D",
-          "correct_detail": "Diamond is the hardest natural substance on Earth, rating 10 (maximum) on the Mohs hardness scale. It is made of pure carbon arranged in a cubic crystal structure."
+          "correct_detail": "Diamond — hardest naturally occurring substance on the Mohs scale"
         },
         {
           "id": "C1Q22",
@@ -266,7 +266,7 @@
             "D": "Hydrogen"
           },
           "correct": "C",
-          "correct_detail": "Plants absorb carbon dioxide (CO₂) during photosynthesis and combine it with water and sunlight to produce glucose (energy) and oxygen as a by-product."
+          "correct_detail": "Carbon dioxide (CO2)"
         },
         {
           "id": "C1Q23",
@@ -278,7 +278,7 @@
             "D": "H2O"
           },
           "correct": "D",
-          "correct_detail": "The chemical formula for water is H₂O — two hydrogen atoms covalently bonded to one oxygen atom. This gives water its unique properties including polarity."
+          "correct_detail": "H₂O — two hydrogen atoms and one oxygen atom"
         },
         {
           "id": "C1Q24",
@@ -290,7 +290,7 @@
             "D": "Max Planck"
           },
           "correct": "C",
-          "correct_detail": "Albert Einstein developed Special Relativity (1905), which introduced E=mc², and General Relativity (1915), which described gravity as the curvature of spacetime."
+          "correct_detail": "Albert Einstein — developed the theory of relativity"
         },
         {
           "id": "C1Q25",
@@ -302,7 +302,7 @@
             "D": "India"
           },
           "correct": "D",
-          "correct_detail": "India surpassed China in 2023 and now holds the top position with over 1.4 billion people, making it the world's most populous country."
+          "correct_detail": "India (as of 2023)"
         },
         {
           "id": "C1Q26",
@@ -314,7 +314,7 @@
             "D": "Russia"
           },
           "correct": "D",
-          "correct_detail": "Russia is the largest country by land area, covering approximately 17.1 million km² and spanning 11 time zones across Europe and Asia."
+          "correct_detail": "Russia — largest country by land area"
         },
         {
           "id": "C1Q27",
@@ -326,7 +326,7 @@
             "D": "Mandarin Chinese"
           },
           "correct": "D",
-          "correct_detail": "Mandarin Chinese has the most native speakers (~1 billion). English is the most widely spoken language overall when including second-language speakers."
+          "correct_detail": "Mandarin Chinese — most spoken native language worldwide"
         },
         {
           "id": "C1Q28",
@@ -338,7 +338,7 @@
             "D": "1946"
           },
           "correct": "C",
-          "correct_detail": "World War II ended in 1945 — Germany surrendered in May (V-E Day) and Japan surrendered in September (V-J Day) following the atomic bombings of Hiroshima and Nagasaki."
+          "correct_detail": "1945 — World War II ended in September 1945"
         },
         {
           "id": "C1Q29",
@@ -350,7 +350,7 @@
             "D": "Euro"
           },
           "correct": "D",
-          "correct_detail": "The Euro (€) is the currency of the Eurozone, currently used by 20 of the 27 EU member states. Some EU members (e.g. Sweden, Poland) retain their own national currencies."
+          "correct_detail": "Euro (€) — currency used by most EU member states"
         },
         {
           "id": "C1Q30",
@@ -362,7 +362,7 @@
             "D": "O negative"
           },
           "correct": "D",
-          "correct_detail": "O negative (O−) is the universal donor for red blood cell transfusions because it lacks A antigens, B antigens, and the Rh factor — making it compatible with any blood type in emergency situations."
+          "correct_detail": "O negative — universal donor for red blood cell transfusions"
         },
         {
           "id": "C1Q31",
@@ -374,7 +374,7 @@
             "D": "9 billion"
           },
           "correct": "C",
-          "correct_detail": "The world population reached 8 billion in November 2022 and stands at approximately 8.1 billion as of 2024, with growth concentrated in sub-Saharan Africa and South Asia."
+          "correct_detail": "Approximately 8 billion people globally"
         },
         {
           "id": "C1Q32",
@@ -386,7 +386,7 @@
             "D": "Switzerland (Geneva)"
           },
           "correct": "D",
-          "correct_detail": "The WHO is headquartered in Geneva, Switzerland. It was established in 1948 as a specialised agency of the United Nations responsible for international public health."
+          "correct_detail": "Switzerland (Geneva)"
         },
         {
           "id": "C1Q33",
@@ -398,7 +398,7 @@
             "D": "World Bank"
           },
           "correct": "C",
-          "correct_detail": "The World Health Organization (WHO) is the UN body responsible for directing and coordinating international health work. It has 194 member states and is headquartered in Geneva."
+          "correct_detail": "World Health Organization (WHO)"
         },
         {
           "id": "C1Q34",
@@ -410,7 +410,7 @@
             "D": "Universal Network for Infant Care and Emergency Finance"
           },
           "correct": "B",
-          "correct_detail": "UNICEF stands for United Nations International Children's Emergency Fund (now officially just 'UNICEF'). It operates in 190+ countries to protect children's rights, health, nutrition, and education."
+          "correct_detail": "Originally 'United Nations International Children's Emergency Fund'; now officially UNICEF"
         },
         {
           "id": "C1Q35",
@@ -422,7 +422,7 @@
             "D": "France"
           },
           "correct": "D",
-          "correct_detail": "The five permanent members (P5) of the UN Security Council — USA, UK, France, Russia, and China — each hold veto power over Security Council resolutions."
+          "correct_detail": "USA, UK, France, Russia, or China (any one)"
         }
       ]
     },
@@ -439,7 +439,7 @@
             "D": "Immune cell production and nutrient absorption"
           },
           "correct": "B",
-          "correct_detail": "The skin has four primary functions: (1) protection — barrier against pathogens, UV radiation, and injury; (2) temperature regulation — via sweating and vasodilation/vasoconstriction; (3) sensation — touch, pain, temperature receptors; (4) Vitamin D synthesis — UV-B triggers production of Vitamin D₃."
+          "correct_detail": "Protection, temperature regulation, sensation, vitamin D synthesis"
         },
         {
           "id": "C2AQ2",
@@ -451,7 +451,7 @@
             "D": "False – temperature is controlled exclusively by the skin"
           },
           "correct": "C",
-          "correct_detail": "FALSE. While the nervous system plays a key role (hypothalamus as thermostat), temperature regulation also involves: the integumentary system (sweating), the circulatory system (vasodilation/vasoconstriction), and the endocrine system (thyroid hormones affecting metabolic rate). It is a multi-system process."
+          "correct_detail": "False — also involves integumentary, endocrine, and circulatory systems"
         },
         {
           "id": "C2AQ3",
@@ -463,7 +463,7 @@
             "D": "Cell"
           },
           "correct": "D",
-          "correct_detail": "The cell is the basic unit of life — the smallest structural and functional unit capable of carrying out all essential life processes including metabolism, energy production, growth, and reproduction."
+          "correct_detail": "Cell — basic structural and functional unit of life"
         },
         {
           "id": "C2AQ4",
@@ -475,7 +475,7 @@
             "D": "Pancreas"
           },
           "correct": "C",
-          "correct_detail": "The kidneys are the primary organs for blood filtration and urine production. They filter approximately 180 litres of blood per day, reabsorbing useful substances and excreting waste products (urea, creatinine) as urine via the ureters."
+          "correct_detail": "Kidneys filter blood, remove waste, and produce urine"
         },
         {
           "id": "C2AQ5",
@@ -487,7 +487,7 @@
             "D": "Hormone transport in plasma"
           },
           "correct": "C",
-          "correct_detail": "Red blood cells (erythrocytes) transport oxygen from the lungs to body tissues using the protein haemoglobin, and carry carbon dioxide (CO₂) back to the lungs for exhalation. They lack a nucleus to maximise haemoglobin space."
+          "correct_detail": "Red blood cells transport oxygen using haemoglobin"
         },
         {
           "id": "C2AQ6",
@@ -499,7 +499,7 @@
             "D": "Cerebellum"
           },
           "correct": "D",
-          "correct_detail": "The cerebellum, located at the posterior base of the brain, is responsible for coordinating voluntary movements, maintaining balance and posture, and regulating fine motor control. Damage causes ataxia (uncoordinated movement)."
+          "correct_detail": "Cerebellum — responsible for balance and coordination"
         },
         {
           "id": "C2AQ7",
@@ -511,7 +511,7 @@
             "D": "50–80 bpm"
           },
           "correct": "B",
-          "correct_detail": "The normal resting heart rate in adults is 60–100 beats per minute (bpm). Below 60 bpm is bradycardia (normal in athletes); above 100 bpm is tachycardia."
+          "correct_detail": "60–100 beats per minute"
         },
         {
           "id": "C2AQ8",
@@ -523,7 +523,7 @@
             "D": "Vitamin D"
           },
           "correct": "D",
-          "correct_detail": "Vitamin D₃ (cholecalciferol) is synthesized in the skin when UV-B radiation converts 7-dehydrocholesterol into Vitamin D₃. It is essential for calcium absorption, bone health, and immune function."
+          "correct_detail": "Vitamin D — synthesized in skin following sunlight exposure"
         },
         {
           "id": "C2AQ9",
@@ -535,7 +535,7 @@
             "D": "Lipid storage"
           },
           "correct": "C",
-          "correct_detail": "Mitochondria are the 'powerhouses of the cell' — they generate ATP (adenosine triphosphate) through aerobic respiration (oxidative phosphorylation). They also regulate apoptosis (programmed cell death) and contain their own DNA."
+          "correct_detail": "Energy production (ATP synthesis)"
         },
         {
           "id": "C2AQ10",
@@ -547,7 +547,7 @@
             "D": "Left ventricle"
           },
           "correct": "D",
-          "correct_detail": "The left ventricle is the most muscular chamber of the heart. It pumps oxygenated blood into the aorta and out to the entire body (systemic circulation). The right ventricle pumps deoxygenated blood to the lungs."
+          "correct_detail": "Left ventricle pumps oxygenated blood to the body"
         },
         {
           "id": "C2AQ11",
@@ -559,7 +559,7 @@
             "D": "38°C"
           },
           "correct": "C",
-          "correct_detail": "Normal human body temperature is 37°C (98.6°F), with a physiological range of 36.1–37.2°C. A temperature above 38°C is generally defined as fever (pyrexia)."
+          "correct_detail": "37°C (98.6°F)"
         },
         {
           "id": "C2AQ12",
@@ -571,7 +571,7 @@
             "D": "Insulin"
           },
           "correct": "D",
-          "correct_detail": "Insulin (produced by beta cells of the pancreatic islets of Langerhans) lowers blood glucose by facilitating cellular uptake. Glucagon (from alpha cells) raises blood glucose by stimulating glycogen breakdown. Together they maintain glucose homeostasis."
+          "correct_detail": "Insulin (lowers) and Glucagon (raises)"
         },
         {
           "id": "C2AQ13",
@@ -583,7 +583,7 @@
             "D": "False – bile is produced by the small intestine"
           },
           "correct": "C",
-          "correct_detail": "TRUE. The liver produces 600–1,000 mL of bile daily. Bile is stored in the gallbladder and released into the duodenum when food arrives, where it emulsifies dietary fats to aid digestion and absorption."
+          "correct_detail": "True — bile is produced by the liver and stored in the gallbladder"
         },
         {
           "id": "C2AQ14",
@@ -595,7 +595,7 @@
             "D": "Immune defense"
           },
           "correct": "D",
-          "correct_detail": "White blood cells (leukocytes) form the body's immune defence. Key types: neutrophils (kill bacteria), B-cells (produce antibodies), T-cells (viral immunity and coordination), macrophages (engulf pathogens). They circulate in blood and lymph."
+          "correct_detail": "White blood cells provide immune defense against pathogens"
         },
         {
           "id": "C2AQ15",
@@ -607,7 +607,7 @@
             "D": "Golgi apparatus"
           },
           "correct": "C",
-          "correct_detail": "The nucleus contains most of the cell's genetic material — DNA organised into 46 chromosomes (23 pairs) in humans. It controls gene expression and directs cell division (mitosis/meiosis)."
+          "correct_detail": "Nucleus — contains most of the cell's DNA"
         },
         {
           "id": "C2AQ16",
@@ -619,7 +619,7 @@
             "D": "Artery"
           },
           "correct": "D",
-          "correct_detail": "Arteries carry blood AWAY from the heart. Most carry oxygenated blood (e.g. aorta to the body). The exception is the pulmonary arteries, which carry deoxygenated blood from the heart to the lungs. Veins carry blood toward the heart."
+          "correct_detail": "Arteries carry blood away from the heart"
         },
         {
           "id": "C2AQ17",
@@ -631,7 +631,7 @@
             "D": "Kidneys"
           },
           "correct": "C",
-          "correct_detail": "The lungs are responsible for gas exchange. Specifically, it occurs in the alveoli — tiny air sacs where oxygen diffuses from air into the bloodstream and carbon dioxide diffuses from blood into the air to be exhaled."
+          "correct_detail": "Lungs perform gas exchange between air and blood"
         },
         {
           "id": "C2AQ18",
@@ -643,7 +643,7 @@
             "D": "Controls heart rhythm and breathing rate directly"
           },
           "correct": "B",
-          "correct_detail": "The hypothalamus is the brain's homeostatic control centre. It regulates body temperature, hunger, thirst, sleep-wake cycles, and emotional responses, and controls the pituitary gland (via releasing/inhibiting hormones), making it central to the endocrine system."
+          "correct_detail": "Regulates body temperature, hunger, thirst, and hormone release"
         },
         {
           "id": "C2AQ19",
@@ -655,7 +655,7 @@
             "D": "False – only spinal cord neurons regenerate, not brain neurons"
           },
           "correct": "C",
-          "correct_detail": "FALSE. Central nervous system (CNS) neurons have very limited capacity to regenerate after injury, due to inhibitory factors in the CNS environment (e.g. myelin-associated inhibitors like Nogo). Peripheral nervous system (PNS) neurons can regenerate partially if the cell body is intact."
+          "correct_detail": "False — CNS neurons have very limited regenerative capacity"
         },
         {
           "id": "C2AQ20",
@@ -667,7 +667,7 @@
             "D": "Platelets (thrombocytes)"
           },
           "correct": "D",
-          "correct_detail": "Platelets (thrombocytes) are the blood cells involved in clotting (haemostasis). When a vessel is injured, platelets aggregate at the site and release clotting factors that trigger a cascade forming a fibrin clot to stop bleeding."
+          "correct_detail": "Platelets (thrombocytes)"
         },
         {
           "id": "C2AQ21",
@@ -679,7 +679,7 @@
             "D": "False – voluntary movements are controlled by the cerebellum alone"
           },
           "correct": "C",
-          "correct_detail": "FALSE. The autonomic nervous system (ANS) controls involuntary functions — heart rate, digestion, glandular secretion, respiratory rate. Voluntary movements (e.g. walking, typing) are controlled by the somatic nervous system via motor neurons to skeletal muscles."
+          "correct_detail": "False — it controls involuntary functions"
         },
         {
           "id": "C2AQ22",
@@ -691,7 +691,7 @@
             "D": "Oxygen delivery and carbon dioxide removal"
           },
           "correct": "C",
-          "correct_detail": "The lymphatic system has three main functions: (1) drains excess tissue fluid (lymph) back into the bloodstream, preventing oedema; (2) absorbs dietary fats from the gut via lacteals; (3) houses lymphocytes (T and B cells) for immune surveillance and response."
+          "correct_detail": "Lymphatic system maintains fluid balance and supports immunity"
         },
         {
           "id": "C2AQ23",
@@ -703,7 +703,7 @@
             "D": "Pituitary gland"
           },
           "correct": "D",
-          "correct_detail": "The pituitary gland (hypophysis) is called the 'master gland' because it secretes hormones that regulate virtually all other endocrine glands — including the thyroid (TSH), adrenal glands (ACTH), and gonads (LH, FSH). It is itself controlled by the hypothalamus."
+          "correct_detail": "Pituitary gland — regulates many other endocrine glands"
         },
         {
           "id": "C2AQ24",
@@ -715,7 +715,7 @@
             "D": "True – but only in fetal development, not in adults"
           },
           "correct": "C",
-          "correct_detail": "TRUE. The pancreas has dual functions: Exocrine — acinar cells secrete digestive enzymes (lipase, amylase, proteases) into the duodenum via the pancreatic duct. Endocrine — islets of Langerhans secrete insulin and glucagon directly into the bloodstream."
+          "correct_detail": "True"
         },
         {
           "id": "C2AQ25",
@@ -727,7 +727,7 @@
             "D": "7.50–7.70"
           },
           "correct": "C",
-          "correct_detail": "Normal human blood pH is 7.35–7.45 (slightly alkaline). Values below 7.35 indicate acidosis; above 7.45 indicate alkalosis. Both are life-threatening if severe and are tightly regulated by the lungs (CO₂) and kidneys (bicarbonate)."
+          "correct_detail": "7.35–7.45"
         },
         {
           "id": "C2AQ26",
@@ -739,7 +739,7 @@
             "D": "Vitamin C"
           },
           "correct": "D",
-          "correct_detail": "Vitamin C (ascorbic acid) deficiency causes scurvy. Vitamin C is essential for collagen synthesis (hydroxylation of proline and lysine). Deficiency leads to bleeding gums, poor wound healing, perifollicular haemorrhages, and eventually death if untreated."
+          "correct_detail": "Vitamin C deficiency causes scurvy"
         },
         {
           "id": "C2BQ1",
@@ -751,7 +751,7 @@
             "D": "Innate is acquired through vaccines; adaptive is present from birth"
           },
           "correct": "C",
-          "correct_detail": "Innate immunity is the body's immediate, non-specific first line of defence (skin, macrophages, inflammation, complement system) — present from birth. Adaptive immunity is slower (days to weeks), antigen-specific, and develops immunological memory through T and B lymphocytes — allowing a faster, stronger response on re-exposure."
+          "correct_detail": "Innate = non-specific, immediate response; Adaptive = specific, slower, develops memory"
         },
         {
           "id": "C2BQ2",
@@ -763,7 +763,7 @@
             "D": "Immunity transferred from mother to child through breast milk"
           },
           "correct": "B",
-          "correct_detail": "Herd immunity occurs when a sufficient proportion of a population is immune (through vaccination or prior infection) so that an infectious disease cannot spread easily, indirectly protecting non-immune individuals. The required threshold varies by disease (e.g. ~95% for measles, ~80–85% for polio)."
+          "correct_detail": "Indirect protection when enough of a population is immune so disease cannot spread easily"
         },
         {
           "id": "C2BQ3",
@@ -775,7 +775,7 @@
             "D": "Osmotic transmission"
           },
           "correct": "C",
-          "correct_detail": "Routes of infectious disease transmission include: airborne (e.g. TB, COVID-19), droplet (e.g. influenza, COVID-19), direct/indirect contact (e.g. skin infections), vector-borne (e.g. malaria via mosquito), faecal-oral (e.g. cholera, typhoid), and bloodborne (e.g. HIV, hepatitis B)."
+          "correct_detail": "Droplet (respiratory), contact (direct/indirect), vector-borne, faecal-oral, airborne"
         },
         {
           "id": "C2BQ4",
@@ -787,7 +787,7 @@
             "D": "False – contraceptives act on the nervous system, not the endocrine system"
           },
           "correct": "C",
-          "correct_detail": "FALSE. Hormonal contraceptives (combined pill, progestogen-only pill, implant, injection, hormonal IUD) act on the endocrine system. However, barrier methods (male/female condoms, diaphragm) work mechanically to block sperm — they do not involve the endocrine system at all. Therefore NOT all contraceptive methods act on the endocrine system."
+          "correct_detail": "False — barrier methods (e.g. condoms) do not involve the endocrine system"
         },
         {
           "id": "C2BQ5",
@@ -799,7 +799,7 @@
             "D": "Active immunity is innate; passive immunity is adaptive"
           },
           "correct": "B",
-          "correct_detail": "Active immunity: the body produces its own antibodies in response to an antigen — either from natural infection or vaccination. It is long-lasting and creates immunological memory. Passive immunity: ready-made antibodies are transferred from another source (e.g. maternal antibodies via placenta or breast milk, or immunoglobulin therapy). It is immediate but temporary as no memory is formed."
+          "correct_detail": "Active = body produces its own antibodies (natural infection or vaccine); Passive = antibodies transferred from another source (e.g. mother to child)"
         },
         {
           "id": "C2BQ6",
@@ -811,7 +811,7 @@
             "D": "Active artificial immunity"
           },
           "correct": "D",
-          "correct_detail": "Vaccination produces active artificial immunity — 'active' because the body generates its own antibodies and memory cells, 'artificial' because it is achieved via a vaccine rather than natural infection. This is distinct from passive immunity (no antibody production by the host)."
+          "correct_detail": "Active artificial immunity — immunity acquired through vaccination"
         },
         {
           "id": "C2BQ7",
@@ -823,7 +823,7 @@
             "D": "Anti-inflammatory agents that reduce disease severity"
           },
           "correct": "B",
-          "correct_detail": "Vaccines contain antigens — substances that trigger an immune response. These may be killed or live-attenuated (weakened) pathogens, subunit proteins, toxoids (inactivated toxins), or mRNA encoding pathogen proteins (e.g. COVID-19 mRNA vaccines). The immune system responds by producing antibodies and memory cells."
+          "correct_detail": "Antigens (killed/weakened pathogens or their proteins) that stimulate antibody production"
         },
         {
           "id": "C2BQ8",
@@ -835,7 +835,7 @@
             "D": "Marasmus and rickets"
           },
           "correct": "C",
-          "correct_detail": "The two main types of malnutrition are: (1) Undernutrition — includes protein-energy malnutrition (kwashiorkor, marasmus) and micronutrient deficiencies (iron, vitamin A, iodine). (2) Overnutrition — excess caloric intake leading to overweight and obesity. Both coexist in many LMICs ('double burden of malnutrition')."
+          "correct_detail": "Undernutrition (e.g. kwashiorkor, marasmus) and overnutrition (obesity)"
         },
         {
           "id": "C2BQ9",
@@ -847,7 +847,7 @@
             "D": "Iron-deficiency anaemia in children under five"
           },
           "correct": "C",
-          "correct_detail": "Kwashiorkor is severe protein deficiency, typically seen in children after weaning onto a low-protein diet while caloric intake may be adequate. Classic features: pitting oedema (due to hypoalbuminaemia), distended abdomen, skin lesions, and hair depigmentation/loss. Distinguished from marasmus (overall caloric deficiency)."
+          "correct_detail": "Severe protein deficiency, often presenting with oedema, distended belly, and hair changes"
         },
         {
           "id": "C2BQ10",
@@ -859,7 +859,7 @@
             "D": "Postpartum haemorrhage"
           },
           "correct": "D",
-          "correct_detail": "Postpartum haemorrhage (PPH) — defined as blood loss >500 mL after vaginal delivery — is the leading preventable cause of maternal mortality globally, accounting for ~27% of maternal deaths. Most deaths are preventable with skilled birth attendance, active management of the third stage of labour, and oxytocin."
+          "correct_detail": "Postpartum haemorrhage is the leading preventable maternal killer globally"
         },
         {
           "id": "C2BQ11",
@@ -871,7 +871,7 @@
             "D": "Vitamin A supplementation for all pregnant women"
           },
           "correct": "C",
-          "correct_detail": "The most impactful interventions for reducing maternal mortality are skilled birth attendance and access to emergency obstetric care (EmOC). Additional key interventions include: antenatal care (ANC), iron and folate supplementation to prevent anaemia, family planning, and clean delivery practices."
+          "correct_detail": "Skilled birth attendance, antenatal care, emergency obstetric care, iron/folate supplementation"
         },
         {
           "id": "C2BQ12",
@@ -883,7 +883,7 @@
             "D": "Disease transmitted by direct skin-to-skin contact"
           },
           "correct": "B",
-          "correct_detail": "Vector-borne transmission means disease is transmitted to humans through a living organism (vector) — typically an arthropod. Examples: malaria and dengue via Anopheles/Aedes mosquitoes; Lyme disease via ticks; sleeping sickness (trypanosomiasis) via tsetse flies. The vector may be a biological host or merely a mechanical carrier."
+          "correct_detail": "Disease transmitted via a living organism (e.g. mosquito for malaria, tick for Lyme disease)"
         }
       ]
     },
@@ -900,7 +900,7 @@
             "D": "Proportion of people exposed to a risk factor"
           },
           "correct": "C",
-          "correct_detail": "Incidence measures the number of NEW cases of a disease arising in a defined population over a specified time period. It reflects the RISK of developing the disease. Formula: Incidence rate = (New cases ÷ Population at risk) × 1,000 (or 100,000). Contrast with prevalence (all existing cases)."
+          "correct_detail": "Number of new cases in a population over a specific time period"
         },
         {
           "id": "C3Q2",
@@ -912,7 +912,7 @@
             "D": "Number of hospital admissions per 1,000 population"
           },
           "correct": "B",
-          "correct_detail": "Prevalence is the total number of EXISTING cases (both new and pre-existing) in a population at a given time. It reflects the overall burden of disease. Formula: Prevalence = (All existing cases ÷ Total population) × 1,000. High prevalence can reflect either high incidence or long disease duration (or both)."
+          "correct_detail": "Total number of existing cases (new + old) in a population at a given time"
         },
         {
           "id": "C3Q3",
@@ -924,7 +924,7 @@
             "D": "The number of deaths in a population over a specific time period"
           },
           "correct": "D",
-          "correct_detail": "Mortality rate measures the number of deaths in a population over a specific time period, usually expressed per 1,000 or 100,000 people per year. It can refer to all-cause mortality or cause-specific mortality (e.g. maternal mortality rate, infant mortality rate)."
+          "correct_detail": "Number of deaths in a population over a specific time period"
         },
         {
           "id": "C3Q4",
@@ -936,7 +936,7 @@
             "D": "The management of global health emergencies by the WHO"
           },
           "correct": "C",
-          "correct_detail": "Epidemiology is the study of the distribution (who, where, when) and determinants (why, how) of health-related states and events in populations, and the application of this knowledge to prevent and control health problems. It is the core science of public health."
+          "correct_detail": "Study of the distribution and determinants of health and disease in populations"
         },
         {
           "id": "C3Q5",
@@ -948,7 +948,7 @@
             "D": "The accuracy of a test when repeated multiple times"
           },
           "correct": "B",
-          "correct_detail": "Sensitivity = True Positive Rate — the proportion of people WITH the disease who test positive. A highly sensitive test has few false negatives. Mnemonic: SnNout — a highly Sensitive test, when Negative, rules OUT the disease. Best used for screening."
+          "correct_detail": "Ability to correctly identify those WITH the disease (true positive rate)"
         },
         {
           "id": "C3Q6",
@@ -960,7 +960,7 @@
             "D": "The cost-effectiveness of a test in a screening programme"
           },
           "correct": "C",
-          "correct_detail": "Specificity = True Negative Rate — the proportion of people WITHOUT the disease who test negative. A highly specific test has few false positives. Mnemonic: SpPin — a highly Specific test, when Positive, rules IN the disease. Best used for confirmation/diagnosis."
+          "correct_detail": "Ability to correctly identify those WITHOUT the disease (true negative rate)"
         },
         {
           "id": "C3Q7",
@@ -972,7 +972,7 @@
             "D": "A metric used to assess quality of life in elderly populations only"
           },
           "correct": "B",
-          "correct_detail": "A DALY (Disability-Adjusted Life Year) represents one year of healthy life lost. It combines: (1) Years of Life Lost (YLL) — due to premature death; and (2) Years Lived with Disability (YLD) — due to illness/disability. DALY = YLL + YLD. Used by WHO to measure the global burden of disease and compare health loss across conditions and countries."
+          "correct_detail": "Years of healthy life lost due to ill-health, disability, or early death"
         },
         {
           "id": "C3Q8",
@@ -984,7 +984,7 @@
             "D": "The probability that an exposed individual will develop the disease"
           },
           "correct": "C",
-          "correct_detail": "Attributable risk (risk difference) = Incidence in exposed group − Incidence in unexposed group. It quantifies how much of the disease risk in the exposed group is due to the exposure itself. Useful for public health interventions — tells you how many cases could be prevented by removing the exposure."
+          "correct_detail": "The proportion of disease in the exposed group attributable to the exposure"
         },
         {
           "id": "C3Q9",
@@ -996,7 +996,7 @@
             "D": "A review that combines results from multiple studies statistically"
           },
           "correct": "C",
-          "correct_detail": "An RCT is the gold standard for establishing causality. Participants are randomly allocated to an intervention or control group, minimising confounding. It allows determination of whether a treatment actually causes the observed outcome. Limitations: expensive, ethical constraints, not always feasible."
+          "correct_detail": "Participants randomly assigned to intervention or control — the gold standard"
         },
         {
           "id": "C3Q10",
@@ -1008,7 +1008,7 @@
             "D": "A cross-sectional survey measuring disease at one point in time"
           },
           "correct": "B",
-          "correct_detail": "A cohort study follows a defined group (cohort) over time, comparing those exposed to a risk factor versus unexposed, and measuring who develops disease. It directly measures INCIDENCE and is suited to studying multiple outcomes from one exposure. Can be prospective (forward in time) or retrospective (using historical data)."
+          "correct_detail": "Longitudinal study following a group over time to assess disease development"
         },
         {
           "id": "C3Q11",
@@ -1020,7 +1020,7 @@
             "D": "A study measuring prevalence at a single point in time"
           },
           "correct": "C",
-          "correct_detail": "A case-control study identifies people who already have the disease (cases) and compares them to people without the disease (controls), then looks backward to compare exposure histories. Efficient for rare diseases and quick to conduct. It estimates the odds ratio (OR) but cannot directly calculate incidence."
+          "correct_detail": "Compares people with a disease (cases) to those without (controls) to identify risk factors"
         },
         {
           "id": "C3Q12",
@@ -1032,7 +1032,7 @@
             "D": "Systematic review / meta-analysis"
           },
           "correct": "D",
-          "correct_detail": "Systematic reviews and meta-analyses sit at the top of the evidence hierarchy because they pool results from multiple high-quality studies, minimise bias, and increase statistical power. They provide the most reliable summary of available evidence on a question."
+          "correct_detail": "Systematic review / meta-analysis"
         },
         {
           "id": "C3Q13",
@@ -1044,7 +1044,7 @@
             "D": "Cohort study"
           },
           "correct": "C",
-          "correct_detail": "Expert opinion and case reports/series provide the lowest level of evidence because they are based on individual clinical experience or single patient observations, without controlled comparison groups. They are susceptible to bias and cannot establish causality."
+          "correct_detail": "Expert opinion / case reports"
         },
         {
           "id": "C3Q14",
@@ -1056,7 +1056,7 @@
             "D": "A disease outbreak occurring across multiple countries or globally"
           },
           "correct": "D",
-          "correct_detail": "A pandemic is an epidemic that has spread across multiple countries or continents, affecting a large number of people globally. Examples: COVID-19 (2020), 1918 influenza (Spanish flu), HIV/AIDS. Distinguished from an epidemic (widespread in one region) and endemic (baseline constant presence)."
+          "correct_detail": "A disease outbreak occurring on a global scale"
         },
         {
           "id": "C3Q15",
@@ -1068,7 +1068,7 @@
             "D": "A disease that only affects animals but can infect humans"
           },
           "correct": "C",
-          "correct_detail": "An endemic disease is one consistently present at a baseline, predictable level within a specific geographic area or population. Examples: malaria in sub-Saharan Africa; dengue in Southeast Asia. Distinguished from epidemic (sudden increase above baseline) and pandemic (global spread)."
+          "correct_detail": "A disease consistently present within a particular geographic area or population"
         },
         {
           "id": "C3Q16",
@@ -1080,7 +1080,7 @@
             "D": "Closing public spaces during a declared emergency"
           },
           "correct": "B",
-          "correct_detail": "Quarantine is the restriction of movement of people who have been EXPOSED to a contagious disease but are not yet symptomatic, to monitor whether they develop illness and prevent potential spread. Duration is set to the maximum incubation period of the disease (e.g. 14 days for COVID-19)."
+          "correct_detail": "Separating people exposed to a disease to see if they become sick"
         },
         {
           "id": "C3Q17",
@@ -1092,7 +1092,7 @@
             "D": "There is no meaningful difference between the two terms"
           },
           "correct": "C",
-          "correct_detail": "Quarantine applies to people who are EXPOSED but NOT YET SICK — they are separated to see if they develop disease. Isolation applies to people who are CONFIRMED SICK — they are separated to prevent them from infecting others. Both aim to break the chain of transmission."
+          "correct_detail": "Quarantine = exposed but not yet sick; Isolation = confirmed sick"
         },
         {
           "id": "C3Q18",
@@ -1104,7 +1104,7 @@
             "D": "Primary is done in hospitals; secondary is done in communities"
           },
           "correct": "C",
-          "correct_detail": "Primary prevention stops disease BEFORE it occurs (e.g. vaccination, health promotion, smoking cessation). Secondary prevention detects disease EARLY to limit harm (e.g. cancer screening, blood pressure checks). Tertiary prevention manages existing disease to reduce complications and disability (e.g. cardiac rehabilitation, diabetes management)."
+          "correct_detail": "Primary = prevents disease onset; Secondary = early detection/screening"
         },
         {
           "id": "C3Q19",
@@ -1116,7 +1116,7 @@
             "D": "The personal lifestyle choices an individual makes regarding diet and exercise"
           },
           "correct": "C",
-          "correct_detail": "Social determinants of health (SDOH) are the non-medical conditions in which people are born, grow, live, work, and age. They include: income and wealth, education, employment, housing, access to nutritious food, transport, social support, and the quality of local health services. SDOH are responsible for the majority of health inequities."
+          "correct_detail": "Non-medical factors (income, education, housing, environment) influencing health outcomes"
         },
         {
           "id": "C3Q20",
@@ -1128,7 +1128,7 @@
             "D": "21"
           },
           "correct": "C",
-          "correct_detail": "There are 17 Sustainable Development Goals (SDGs), adopted by all 193 UN member states in September 2015 as part of the 2030 Agenda for Sustainable Development. They replaced the Millennium Development Goals (MDGs) with a broader, universal scope covering 169 targets."
+          "correct_detail": "17 Sustainable Development Goals adopted by the UN in 2015"
         },
         {
           "id": "C3Q21",
@@ -1236,7 +1236,7 @@
             "D": "Hospital reform in low-income countries"
           },
           "correct": "B",
-          "correct_detail": "The Alma-Ata Declaration (1978) is the founding document of the Primary Health Care (PHC) movement. It declared that health is a fundamental human right and called for action by all governments to protect and promote health for all people, particularly in low-income countries — leading to the 'Health for All by 2000' campaign."
+          "correct_detail": "Primary Health Care (1978)"
         },
         {
           "id": "C3Q30",
@@ -1248,7 +1248,7 @@
             "D": "Preventive care targeting only children and mothers"
           },
           "correct": "C",
-          "correct_detail": "Primary health care (PHC) as defined at Alma-Ata (1978) refers to essential, first-contact health care that is: universally accessible, affordable for communities, delivered as close to home as possible, and covers promotion, prevention, treatment, and rehabilitation. It emphasises community participation and intersectoral collaboration."
+          "correct_detail": "Essential health care universally accessible at a cost communities can afford (Alma-Ata, 1978)"
         },
         {
           "id": "C3Q31",
@@ -1260,7 +1260,7 @@
             "D": "Malaria"
           },
           "correct": "C",
-          "correct_detail": "Smallpox, caused by the Variola virus, was declared eradicated by the WHO in May 1980, following a global vaccination campaign. It is the only human infectious disease to have been completely eradicated. The last naturally occurring case was in 1977 in Somalia."
+          "correct_detail": "Smallpox — declared eradicated by WHO in 1980"
         },
         {
           "id": "C3Q32",
@@ -1320,7 +1320,7 @@
             "D": "A health insurance scheme for workers in the formal employment sector"
           },
           "correct": "C",
-          "correct_detail": "Universal Health Coverage (UHC) means that all people can access the health services they need — promotive, preventive, curative, rehabilitative, and palliative — without suffering financial hardship. It is a core target of SDG 3. Progress is measured by the UHC Service Coverage Index."
+          "correct_detail": "All people access needed health services without financial hardship"
         },
         {
           "id": "C3Q37",
@@ -1332,7 +1332,7 @@
             "D": "A state of optimal biological functioning and normal vital signs"
           },
           "correct": "B",
-          "correct_detail": "The WHO (1948) defines health as: 'a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity.' This holistic definition is important because it acknowledges mental and social dimensions, though it has been criticised for setting an unattainably 'complete' standard."
+          "correct_detail": "Complete physical, mental, and social well-being — not merely absence of disease"
         },
         {
           "id": "C3Q38",
@@ -1344,7 +1344,7 @@
             "D": "Ensuring every citizen pays the same amount for healthcare"
           },
           "correct": "C",
-          "correct_detail": "Health equity is the absence of unfair, avoidable, or remediable differences in health among population groups defined by social, economic, demographic, or geographic characteristics. It is the goal of health justice — ensuring every person has a fair opportunity to attain their highest level of health."
+          "correct_detail": "Absence of unfair and avoidable differences in health among population groups"
         },
         {
           "id": "C3Q39",
@@ -1356,7 +1356,7 @@
             "D": "Raise healthcare worker salaries"
           },
           "correct": "B",
-          "correct_detail": "Insecticide-treated bed nets (ITNs) are one of the most cost-effective, evidence-based interventions for reducing malaria transmission. They provide a physical barrier and kill mosquitoes (Anopheles) that bite at night. Building a hospital addresses treatment, not prevention, which is needed to reduce rising rates."
+          "correct_detail": "Distribute insecticide-treated bed nets to reduce malaria transmission"
         },
         {
           "id": "C3Q40",
@@ -1368,7 +1368,7 @@
             "D": "Too few specialist doctors"
           },
           "correct": "B",
-          "correct_detail": "Lack of clean water and sanitation is the most upstream social determinant here. Diarrhoeal diseases from contaminated water are among the leading causes of under-5 mortality globally. Clean water, oral rehydration therapy, and sanitation are more impactful for child mortality than hospital bed counts."
+          "correct_detail": "Lack of clean water and sanitation increases child mortality risk"
         },
         {
           "id": "C3Q41",
@@ -1380,7 +1380,7 @@
             "D": "It lowers rates of non-communicable diseases such as diabetes"
           },
           "correct": "B",
-          "correct_detail": "Access to clean water prevents waterborne diseases including cholera, typhoid fever, hepatitis A, and dysentery — which collectively kill millions annually, predominantly children under 5. It also enables hand hygiene (preventing faecal-oral transmission), safe food preparation, and sanitation infrastructure."
+          "correct_detail": "Prevents diarrheal diseases, cholera, typhoid; supports hygiene and sanitation; reduces child mortality"
         },
         {
           "id": "C3Q42",
@@ -1392,7 +1392,7 @@
             "D": "Antibiotic prophylaxis and caesarean section availability only"
           },
           "correct": "C",
-          "correct_detail": "The most evidence-based combination for reducing maternal mortality is skilled birth attendance (trained midwife/doctor present at delivery) combined with antenatal care (ANC). Emergency obstetric care access, oxytocin for postpartum haemorrhage prevention, and iron/folate supplementation are also critical."
+          "correct_detail": "Skilled birth attendance + antenatal care (also: emergency obstetric care, iron supplementation)"
         },
         {
           "id": "C3Q43",
@@ -1404,7 +1404,7 @@
             "D": "Variation in individual food preferences"
           },
           "correct": "C",
-          "correct_detail": "Key contributors to health inequity include: income inequality (poverty limits access to food, housing, healthcare), low educational attainment, gender discrimination, geographic isolation (rural/remote areas), ethnicity and race, inadequate health infrastructure, political instability, and weak governance. These are the structural social determinants of health."
+          "correct_detail": "Income, education, gender, geography, ethnicity, access to services, political instability"
         }
       ]
     },
@@ -1421,7 +1421,7 @@
             "D": "20"
           },
           "correct": "C",
-          "correct_detail": "Mean = sum of all values ÷ number of values. Step 1: Add all values: 4 + 8 + 15 + 16 + 23 + 42 = 108. Step 2: Divide by the count (6 numbers): 108 ÷ 6 = 18. Answer: 18. Note: the mean is sensitive to outliers — the 42 pulls it above the middle values."
+          "correct_detail": "(4+8+15+16+23+42) / 6 = 108/6 = 18"
         },
         {
           "id": "C4SQ2",
@@ -1433,7 +1433,7 @@
             "D": "15"
           },
           "correct": "B",
-          "correct_detail": "Median = the middle value when data is sorted in order. Step 1: Data is already sorted: 3, 7, 9, 12, 15, 18, 21. Step 2: There are 7 values, so the middle is the 4th value. Step 3: Count to the 4th: 3, 7, 9, →12. Answer: 12. The median is unaffected by extreme values."
+          "correct_detail": "Middle value = 12"
         },
         {
           "id": "C4SQ3",
@@ -1445,7 +1445,7 @@
             "D": "15"
           },
           "correct": "C",
-          "correct_detail": "Median with an even number of values = average of the two middle values. Step 1: Data sorted: 5, 10, 15, 20. Step 2: 4 values — middle two are the 2nd and 3rd: 10 and 15. Step 3: Average them: (10 + 15) ÷ 2 = 25 ÷ 2 = 12.5. Answer: 12.5."
+          "correct_detail": "(10+15)/2 = 12.5"
         },
         {
           "id": "C4SQ4",
@@ -1457,7 +1457,7 @@
             "D": "9"
           },
           "correct": "C",
-          "correct_detail": "Mode = the value that appears most frequently. Step 1: List values: 2, 4, 4, 6, 7, 7, 7, 9. Step 2: Count each: 2 appears once, 4 appears twice, 6 once, 7 appears three times, 9 once. Step 3: 7 appears most (3 times). Answer: 7. (There can be no mode, one mode, or multiple modes.)"
+          "correct_detail": "7 (appears most frequently)"
         },
         {
           "id": "C4SQ5",
@@ -1469,7 +1469,7 @@
             "D": "44"
           },
           "correct": "C",
-          "correct_detail": "Range = Maximum value − Minimum value. Step 1: Identify max and min in: 13, 27, 5, 44, 8. Max = 44, Min = 5. Step 2: Range = 44 − 5 = 39. Answer: 39. The range is the simplest measure of spread but is highly sensitive to outliers."
+          "correct_detail": "44 − 5 = 39"
         },
         {
           "id": "C4SQ6",
@@ -1481,7 +1481,7 @@
             "D": "26"
           },
           "correct": "C",
-          "correct_detail": "Mean = sum ÷ count. Step 1: Add all values: 10 + 20 + 20 + 30 + 40 = 120. Step 2: Divide by the count (5 numbers): 120 ÷ 5 = 24. Answer: 24. Note: the mode is 20 (appears twice) and the median is also 20 (middle of 5 sorted values)."
+          "correct_detail": "120/5 = 24"
         },
         {
           "id": "C4SQ7",
@@ -1493,7 +1493,7 @@
             "D": "65%"
           },
           "correct": "C",
-          "correct_detail": "Percentage = (part ÷ whole) × 100. Step 1: Part = 25 (passed), Whole = 40 (total). Step 2: 25 ÷ 40 = 0.625. Step 3: 0.625 × 100 = 62.5%. Answer: 62.5%."
+          "correct_detail": "(25/40) × 100 = 62.5%"
         },
         {
           "id": "C4SQ8",
@@ -1505,7 +1505,7 @@
             "D": "500 per 1,000"
           },
           "correct": "C",
-          "correct_detail": "Prevalence rate per 1,000 = (number of cases ÷ total population) × 1,000. Step 1: Cases = 500, Population = 10,000. Step 2: 500 ÷ 10,000 = 0.05. Step 3: 0.05 × 1,000 = 50 per 1,000. Answer: 50 per 1,000. This point prevalence rate helps plan healthcare resource allocation."
+          "correct_detail": "(500/10,000) × 1,000 = 50 per 1,000"
         },
         {
           "id": "C4SQ9",
@@ -1517,7 +1517,7 @@
             "D": "87.5%"
           },
           "correct": "C",
-          "correct_detail": "Percentage score = (correct answers ÷ total questions) × 100. Step 1: 68 ÷ 80 = 0.85. Step 2: 0.85 × 100 = 85%. Answer: 85%."
+          "correct_detail": "(68/80) × 100 = 85%"
         },
         {
           "id": "C4SQ10",
@@ -1529,7 +1529,7 @@
             "D": "16"
           },
           "correct": "C",
-          "correct_detail": "Step 1: Find the total sum needed. Mean = 14, number of values = 5. Total = 14 × 5 = 70. Step 2: Sum the four known values: 10 + 12 + 16 + 18 = 56. Step 3: Fifth number = Total − Known sum = 70 − 56 = 14. Answer: 14."
+          "correct_detail": "Total = 14×5 = 70; 70 − 56 = 14"
         },
         {
           "id": "C4PQ1",
@@ -1541,7 +1541,7 @@
             "D": "2/3"
           },
           "correct": "C",
-          "correct_detail": "Probability = favourable outcomes ÷ total possible outcomes. A fair coin has 2 equally likely outcomes: heads or tails. P(heads) = 1 ÷ 2 = 0.5 (or 50%). Answer: 1/2."
+          "correct_detail": "1/2 = 0.5"
         },
         {
           "id": "C4PQ2",
@@ -1553,7 +1553,7 @@
             "D": "1/6"
           },
           "correct": "D",
-          "correct_detail": "A fair 6-sided die has 6 equally likely outcomes (1, 2, 3, 4, 5, 6). Only one face shows '3'. P(rolling a 3) = 1 ÷ 6 ≈ 0.167 (or ~16.7%). Answer: 1/6."
+          "correct_detail": "1/6"
         },
         {
           "id": "C4PQ3",
@@ -1565,7 +1565,7 @@
             "D": "1/48"
           },
           "correct": "C",
-          "correct_detail": "A fair 24-sided die has 24 equally likely outcomes. Only one face shows '3'. P(rolling a 3) = 1 ÷ 24 ≈ 0.042 (or ~4.2%). Answer: 1/24. As the die has more sides, the probability of any specific face decreases."
+          "correct_detail": "1/24"
         },
         {
           "id": "C4PQ4",
@@ -1577,7 +1577,7 @@
             "D": "1/16"
           },
           "correct": "C",
-          "correct_detail": "For independent events (one does not affect the other), multiply their probabilities. P(heads) = 1/2. P(rolling a 6) = 1/6. P(both) = 1/2 × 1/6 = 1/12 ≈ 0.083 (or ~8.3%). Answer: 1/12."
+          "correct_detail": "1/2 × 1/6 = 1/12"
         },
         {
           "id": "C4PQ5",
@@ -1589,7 +1589,7 @@
             "D": "1/72"
           },
           "correct": "B",
-          "correct_detail": "For three independent events, multiply all three probabilities. P(specific face on 24-sided die) = 1/24. P(specific face on 6-sided die) = 1/6. P(specific side of coin) = 1/2. P(all three specific outcomes) = 1/24 × 1/6 × 1/2 = 1/288 ≈ 0.0035. Answer: 1/288. This question appeared in the actual DIT exam."
+          "correct_detail": "1/24 × 1/6 × 1/2 = 1/288"
         },
         {
           "id": "C4PQ6",
@@ -1601,7 +1601,7 @@
             "D": "3/5"
           },
           "correct": "C",
-          "correct_detail": "P(blue) = number of blue balls ÷ total balls. Blue = 5, Total = 3 + 5 + 2 = 10. P(blue) = 5 ÷ 10 = 1/2 = 0.5. Answer: 1/2 (50%). Each ball is assumed equally likely to be picked."
+          "correct_detail": "5/10 = 1/2"
         },
         {
           "id": "C4PQ7",
@@ -1613,7 +1613,7 @@
             "D": "5/6"
           },
           "correct": "D",
-          "correct_detail": "Use the complement rule: P(event does NOT happen) = 1 − P(event happens). P(rolling a 1) = 1/6. P(NOT rolling a 1) = 1 − 1/6 = 5/6 ≈ 0.833. Answer: 5/6. The complement rule is faster than counting all other outcomes."
+          "correct_detail": "5/6"
         },
         {
           "id": "C4PQ8",
@@ -1625,7 +1625,7 @@
             "D": "0.8"
           },
           "correct": "C",
-          "correct_detail": "Use the complement rule: P(NOT rain) = 1 − P(rain) = 1 − 0.3 = 0.7. Answer: 0.7 (70%). All probabilities of an event and its complement always sum to 1."
+          "correct_detail": "1 − 0.3 = 0.7"
         },
         {
           "id": "C4AQ1",
@@ -1637,7 +1637,7 @@
             "D": "7"
           },
           "correct": "C",
-          "correct_detail": "2x + 5 = 17. Step 1: Subtract 5 from both sides: 2x = 17 − 5 = 12. Step 2: Divide both sides by 2: x = 12 ÷ 2 = 6. Answer: x = 6. Check: 2(6) + 5 = 17 ✓"
+          "correct_detail": "2x + 5 = 17 → 2x = 12 → x = 6"
         },
         {
           "id": "C4AQ2",
@@ -1649,7 +1649,7 @@
             "D": "8"
           },
           "correct": "C",
-          "correct_detail": "3x − 7 = 14. Step 1: Add 7 to both sides: 3x = 14 + 7 = 21. Step 2: Divide both sides by 3: x = 21 ÷ 3 = 7. Answer: x = 7. Check: 3(7) − 7 = 21 − 7 = 14 ✓"
+          "correct_detail": "3x − 7 = 14 → 3x = 21 → x = 7"
         },
         {
           "id": "C4AQ3",
@@ -1661,7 +1661,7 @@
             "D": "6"
           },
           "correct": "B",
-          "correct_detail": "5x + 3 = 3x + 11. Step 1: Move x terms to one side: 5x − 3x = 11 − 3. Step 2: 2x = 8. Step 3: x = 8 ÷ 2 = 4. Answer: x = 4. Check: 5(4) + 3 = 23; 3(4) + 11 = 23 ✓"
+          "correct_detail": "5x + 3 = 3x + 11 → 2x = 8 → x = 4"
         },
         {
           "id": "C4AQ4",
@@ -1673,7 +1673,7 @@
             "D": "20"
           },
           "correct": "C",
-          "correct_detail": "x/4 + 3 = 7. Step 1: Subtract 3 from both sides: x/4 = 7 − 3 = 4. Step 2: Multiply both sides by 4: x = 4 × 4 = 16. Answer: x = 16. Check: 16/4 + 3 = 4 + 3 = 7 ✓"
+          "correct_detail": "x/4 + 3 = 7 → x/4 = 4 → x = 16"
         },
         {
           "id": "C4AQ5",
@@ -1685,7 +1685,7 @@
             "D": "7"
           },
           "correct": "C",
-          "correct_detail": "2(x + 3) = 18. Step 1: Expand the brackets: 2x + 6 = 18. Step 2: Subtract 6 from both sides: 2x = 12. Step 3: Divide by 2: x = 6. Answer: x = 6. Check: 2(6 + 3) = 2(9) = 18 ✓"
+          "correct_detail": "2(x + 3) = 18 → x + 3 = 9 → x = 6"
         },
         {
           "id": "C4AQ6",
@@ -1697,7 +1697,7 @@
             "D": "6"
           },
           "correct": "C",
-          "correct_detail": "4x − 2 = 2x + 8. Step 1: Move x terms to one side: 4x − 2x = 8 + 2. Step 2: 2x = 10. Step 3: x = 10 ÷ 2 = 5. Answer: x = 5. Check: 4(5) − 2 = 18; 2(5) + 8 = 18 ✓"
+          "correct_detail": "4x − 2 = 2x + 8 → 2x = 10 → x = 5"
         },
         {
           "id": "C4AQ7",
@@ -1709,7 +1709,7 @@
             "D": "6"
           },
           "correct": "B",
-          "correct_detail": "3(2x − 1) = 21. Step 1: Expand: 6x − 3 = 21. Step 2: Add 3 to both sides: 6x = 24. Step 3: Divide by 6: x = 4. Answer: x = 4. Check: 3(2×4 − 1) = 3(7) = 21 ✓"
+          "correct_detail": "3(2x − 1) = 21 → 6x = 24 → x = 4"
         },
         {
           "id": "C4AQ8",
@@ -1721,7 +1721,7 @@
             "D": "±8"
           },
           "correct": "B",
-          "correct_detail": "x² = 49. Take the square root of both sides: x = ±√49 = ±7. Answer: x = 7 or x = −7. Both values satisfy x² = 49. In a real-world context (e.g. a length or count), only x = 7 would apply."
+          "correct_detail": "x² = 49 → x = ±7"
         },
         {
           "id": "C4AQ9",
@@ -1733,7 +1733,7 @@
             "D": "15"
           },
           "correct": "C",
-          "correct_detail": "(x + 2)/3 = 5. Step 1: Multiply both sides by 3: x + 2 = 15. Step 2: Subtract 2 from both sides: x = 13. Answer: x = 13. Check: (13 + 2)/3 = 15/3 = 5 ✓"
+          "correct_detail": "(x + 2)/3 = 5 → x + 2 = 15 → x = 13"
         },
         {
           "id": "C4AQ10",
@@ -1745,7 +1745,7 @@
             "D": "7"
           },
           "correct": "B",
-          "correct_detail": "7x − 4 = 3x + 16. Step 1: Move x terms to one side: 7x − 3x = 16 + 4. Step 2: 4x = 20. Step 3: x = 20 ÷ 4 = 5. Answer: x = 5. Check: 7(5) − 4 = 31; 3(5) + 16 = 31 ✓"
+          "correct_detail": "7x − 4 = 3x + 16 → 4x = 20 → x = 5"
         },
         {
           "id": "C4MQ1",
@@ -1757,7 +1757,7 @@
             "D": "36 min"
           },
           "correct": "C",
-          "correct_detail": "New wait time = Original × (1 − reduction%). Step 1: Reduction = 15% = 0.15. Step 2: New time = 40 × (1 − 0.15) = 40 × 0.85 = 34 minutes. Answer: 34 minutes. Alternatively: 15% of 40 = 6 minutes saved; 40 − 6 = 34."
+          "correct_detail": "40 × 0.85 = 34 minutes"
         },
         {
           "id": "C4MQ2",
@@ -1769,7 +1769,7 @@
             "D": "250"
           },
           "correct": "C",
-          "correct_detail": "If a vaccine is 90% effective, then 10% of vaccinated people may still contract the disease. Step 1: 10% of 2,000 = 2,000 × 0.10 = 200. Answer: 200 people. This illustrates that no vaccine is 100% effective — this is why herd immunity also matters."
+          "correct_detail": "2,000 × 0.10 = 200 people"
         },
         {
           "id": "C4MQ3",
@@ -1781,7 +1781,7 @@
             "D": "$35 billion"
           },
           "correct": "C",
-          "correct_detail": "Healthcare spending = GDP × percentage. Step 1: 6% of $500 billion = 500 × 0.06 = $30 billion. Answer: $30 billion. Context: WHO recommends low-income countries spend at least 5% of GDP on health to achieve universal health coverage."
+          "correct_detail": "500 × 0.06 = $30 billion"
         },
         {
           "id": "C4MQ4",
@@ -1793,7 +1793,7 @@
             "D": "18%"
           },
           "correct": "C",
-          "correct_detail": "Percentage increase = (increase ÷ original) × 100. Step 1: Increase = 9.2 − 8.0 = 1.2 million. Step 2: Percentage increase = (1.2 ÷ 8.0) × 100 = 0.15 × 100 = 15%. Answer: 15%."
+          "correct_detail": "(1.2/8) × 100 = 15%"
         },
         {
           "id": "C4MQ5",
@@ -1805,7 +1805,7 @@
             "D": "45"
           },
           "correct": "C",
-          "correct_detail": "Children seen = total patients × percentage. Step 1: 35% of 120 = 120 × 0.35 = 42. Answer: 42 children per day. This type of calculation is used in healthcare planning and resource allocation."
+          "correct_detail": "120 × 0.35 = 42"
         },
         {
           "id": "C4MQ6",
@@ -1817,7 +1817,7 @@
             "D": "$350"
           },
           "correct": "D",
-          "correct_detail": "Drug B = Drug A cost × (1 + increase%). Step 1: 40% more than $250 = 250 × 1.40 = $350. Answer: $350. Alternatively: 40% of 250 = 100; 250 + 100 = 350."
+          "correct_detail": "250 × 1.4 = $350"
         },
         {
           "id": "C4MQ7",
@@ -1829,7 +1829,7 @@
             "D": "3,000"
           },
           "correct": "C",
-          "correct_detail": "Incidence rate per 100,000 = (cases ÷ population) × 100,000. Step 1: 3 ÷ 1,000 = 0.003. Step 2: 0.003 × 100,000 = 300 per 100,000 per year. Answer: 300 per 100,000. Expressing rates per 100,000 is the standard in epidemiology for comparability across populations."
+          "correct_detail": "(3/1,000) × 100,000 = 300 per 100,000"
         },
         {
           "id": "C4LQ1",
@@ -1841,7 +1841,7 @@
             "D": "All graduates are doctors"
           },
           "correct": "C",
-          "correct_detail": "From the premises: ALL doctors are graduates, and SOME graduates are researchers. We cannot conclude that any doctors are researchers — the two groups (doctors and researchers) may not overlap at all. The answer is that some doctors MAY be researchers, but this CANNOT be concluded with certainty. This is a fallacy of the undistributed middle."
+          "correct_detail": "Some doctors MAY be researchers — cannot conclude all are"
         },
         {
           "id": "C4LQ2",
@@ -1853,7 +1853,7 @@
             "D": "Birds cannot swim"
           },
           "correct": "C",
-          "correct_detail": "From the premises: cats CAN swim (stated), birds CAN fly (stated). Option A (cats can fly) — NOT stated. Option B (birds can swim) — NOT stated. Option C (cats can swim) — directly stated. Option D (birds cannot swim) — NOT stated. Answer: C. Only what is directly given in the premises can be concluded."
+          "correct_detail": "c) Cats can swim"
         },
         {
           "id": "C4LQ3",
@@ -1865,7 +1865,7 @@
             "D": "Cannot be determined"
           },
           "correct": "B",
-          "correct_detail": "Order the heights using the clues: A > C (C is shorter than A) and C > B (C is taller than B). Therefore the order is: A (tallest) > C (middle) > B (shortest). Answer: B is the shortest."
+          "correct_detail": "B"
         },
         {
           "id": "C4LQ4",
@@ -1877,7 +1877,7 @@
             "D": "Drug X is not safe for humans"
           },
           "correct": "C",
-          "correct_detail": "This is a valid deductive syllogism: Premise 1: All antibiotics kill bacteria. Premise 2: Drug X is an antibiotic. Conclusion: Drug X kills bacteria. This follows logically — all members of a category share the category's defining properties. Answer: Drug X kills bacteria — True."
+          "correct_detail": "Drug X kills bacteria — True (valid deduction)"
         },
         {
           "id": "C4LQ5",
@@ -1889,7 +1889,7 @@
             "D": "11:00 PM"
           },
           "correct": "C",
-          "correct_detail": "Count forward in 8-hour intervals from the first dose: 1st dose: 6:00 AM. 2nd dose: 6:00 AM + 8 hours = 2:00 PM. 3rd dose: 2:00 PM + 8 hours = 10:00 PM. Answer: 10:00 PM. This type of medication timing question tests basic schedule arithmetic."
+          "correct_detail": "6:00 AM → 2:00 PM → 10:00 PM"
         },
         {
           "id": "C4LQ6",
@@ -1901,7 +1901,7 @@
             "D": "Not all dolphins are mammals"
           },
           "correct": "C",
-          "correct_detail": "This is a valid deductive argument (universal affirmative syllogism): Premise 1: ALL mammals are warm-blooded. Premise 2: Dolphins ARE mammals. Conclusion: Dolphins are warm-blooded. Answer: TRUE. This follows necessarily — there are no exceptions to the first premise as stated."
+          "correct_detail": "Dolphins are warm-blooded — True"
         },
         {
           "id": "C4LQ7",
@@ -1913,7 +1913,7 @@
             "D": "Managers are always nurses"
           },
           "correct": "C",
-          "correct_detail": "From the premises: SOME nurses are managers, and ALL managers attend meetings. The nurses who are managers attend meetings (because all managers do). But we cannot say ALL nurses attend meetings — only those who are managers do. Answer: Some nurses attend meetings — True; but we CANNOT conclude all nurses do."
+          "correct_detail": "Some nurses attend meetings — True; cannot say all nurses do"
         }
       ]
     }
