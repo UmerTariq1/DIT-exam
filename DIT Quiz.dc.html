@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  @keyframes cardIn { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes pop { 0% { transform: scale(.6); } 60% { transform: scale(1.18); } 100% { transform: scale(1); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="quiz-data.js"></script>
+</helmet>
+<div style="min-height:100vh;width:100%;display:flex;justify-content:center;background:linear-gradient(180deg,#f0f9ff 0%,#ecfeff 45%,#f0fdfa 100%);font-family:Nunito,system-ui,sans-serif;">
+<div style="width:100%;max-width:560px;position:relative;min-height:100vh;">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div style="padding:22px 20px 40px;display:flex;flex-direction:column;gap:22px;">
+  <div style="display:flex;align-items:center;gap:11px;">
+    <div style="width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#0ea5e9,#14b8a6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:14px;letter-spacing:.02em;">DIT</div>
+    <div style="display:flex;flex-direction:column;line-height:1.15;">
+      <span style="font-size:14px;font-weight:800;color:#0f172a;">Global Public Health</span>
+      <span style="font-size:11px;font-weight:700;color:#64748b;letter-spacing:.04em;text-transform:uppercase;">Assessment Test</span>
+    </div>
+  </div>
+
+  <sc-if value="{{ testStarted }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid #e0f2fe;border-radius:16px;padding:12px 14px;box-shadow:0 8px 24px -16px rgba(2,132,199,.4);">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span style="{{ timerPillStyle }}">{{ timerIcon }} {{ timerDisplay }}</span>
+        <span style="font-size:13px;font-weight:700;color:#475569;">{{ completedCount }}/{{ totalCats }} categories done</span>
+      </div>
+      <button onClick="{{ onFinishTest }}" style="border:none;background:#0f172a;color:#fff;font-family:inherit;font-weight:800;font-size:13px;padding:9px 14px;border-radius:11px;cursor:pointer;">Finish ›</button>
+    </div>
+  </sc-if>
+
+  <div style="margin-top:2px;">
+    <h1 style="font-size:33px;font-weight:900;color:#0f172a;line-height:1.08;margin:0;letter-spacing:-.02em;">Ready to test your<br>knowledge?</h1>
+    <p style="font-size:15px;color:#475569;margin:11px 0 0;font-weight:700;line-height:1.5;">Pick any category to begin. {{ perCat }} questions each, instant feedback, and one {{ timerMin }}-minute clock for the whole test.</p>
+  </div>
+
+  <div style="display:flex;gap:9px;flex-wrap:wrap;">
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;color:#0369a1;background:#e0f2fe;border-radius:999px;padding:7px 13px;">⏱ {{ timerMin }} min total</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;color:#0f766e;background:#ccfbf1;border-radius:999px;padding:7px 13px;">📚 {{ totalCats }} categories</span>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:13px;">
+    <sc-for list="{{ categories }}" as="cat" hint-placeholder-count="4">
+      <button onClick="{{ cat.onStart }}" style="{{ cat.cardStyle }}" style-hover="{{ cat.cardHover }}">
+        <span style="{{ cat.iconStyle }}">{{ cat.icon }}</span>
+        <span style="display:flex;flex-direction:column;flex:1;text-align:left;gap:3px;">
+          <span style="font-size:16.5px;font-weight:900;color:#0f172a;line-height:1.15;">{{ cat.shortName }}</span>
+          <span style="{{ cat.statusStyle }}">{{ cat.statusText }}</span>
+        </span>
+        <span style="{{ cat.arrowStyle }}">{{ cat.arrow }}</span>
+      </button>
+    </sc-for>
+  </div>
+
+  <sc-if value="{{ anyCompleted }}" hint-placeholder-val="{{ false }}">
+    <button onClick="{{ onReset }}" style="align-self:center;border:none;background:transparent;color:#94a3b8;font-family:inherit;font-weight:800;font-size:13px;padding:6px;cursor:pointer;">↺ Reset all progress</button>
+  </sc-if>
+</div>
+</sc-if>
+
+<sc-if value="{{ isQuiz }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;min-height:100vh;">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 20px 6px;">
+    <button onClick="{{ onHome }}" style="border:none;background:#fff;border:1px solid #e2e8f0;color:#475569;font-family:inherit;font-weight:800;font-size:13px;padding:9px 13px;border-radius:11px;cursor:pointer;">‹ Categories</button>
+    <span style="{{ timerPillStyle }}">{{ timerIcon }} {{ timerDisplay }}</span>
+  </div>
+
+  <div style="padding:8px 20px 0;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;">
+    <div style="display:flex;flex-direction:column;gap:2px;">
+      <span style="font-size:15px;font-weight:900;color:#0f172a;line-height:1.1;">{{ catName }}</span>
+      <span style="font-size:12.5px;font-weight:800;color:#94a3b8;">Question {{ qNum }} of {{ qTotal }}</span>
+    </div>
+    <sc-if value="{{ streakVisible }}" hint-placeholder-val="{{ false }}">
+      <span key="{{ streak }}" style="display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:900;color:#b45309;background:#fff7ed;border:1px solid #fed7aa;border-radius:999px;padding:6px 11px;animation:pop .4s ease;">🔥 {{ streak }} streak</span>
+    </sc-if>
+  </div>
+
+  <div style="padding:12px 20px 0;">
+    <div style="height:9px;background:#e2e8f0;border-radius:999px;overflow:hidden;">
+      <div style="{{ progressFillStyle }}"></div>
+    </div>
+  </div>
+
+  <div key="{{ cardKey }}" style="margin:18px 20px;background:#fff;border-radius:26px;padding:24px 22px;box-shadow:0 18px 40px -22px rgba(2,132,199,.45);animation:cardIn .42s cubic-bezier(.2,.85,.25,1) both;">
+    <div style="font-size:20.5px;font-weight:900;color:#0f172a;line-height:1.32;letter-spacing:-.01em;">{{ questionText }}</div>
+    <div style="display:flex;flex-direction:column;gap:11px;margin-top:20px;">
+      <sc-for list="{{ optionList }}" as="opt" hint-placeholder-count="4">
+        <button onClick="{{ opt.onClick }}" disabled="{{ opt.disabled }}" style="{{ opt.style }}">
+          <span style="{{ opt.letterStyle }}">{{ opt.letter }}</span>
+          <span style="flex:1;text-align:left;">{{ opt.text }}</span>
+          <span style="{{ opt.iconStyle }}">{{ opt.icon }}</span>
+        </button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ answered }}" hint-placeholder-val="{{ false }}">
+      <div style="{{ explStyle }}">
+        <div style="{{ explTitleStyle }}">{{ explIcon }} {{ explTitle }}</div>
+        <div style="font-size:14.5px;font-weight:700;color:#334155;line-height:1.5;margin-top:5px;">{{ explanationText }}</div>
+      </div>
+    </sc-if>
+  </div>
+
+  <div style="margin-top:auto;padding:4px 20px 28px;display:flex;gap:11px;">
+    <sc-if value="{{ hasPrev }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ onPrev }}" style="flex:0 0 auto;border:1px solid #e2e8f0;background:#fff;color:#475569;font-family:inherit;font-weight:800;font-size:15px;padding:15px 18px;border-radius:15px;cursor:pointer;">‹ Back</button>
+    </sc-if>
+    <button onClick="{{ onNext }}" disabled="{{ nextDisabled }}" style="{{ nextStyle }}">{{ nextLabel }}</button>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isSummary }}" hint-placeholder-val="{{ false }}">
+<div style="padding:22px 20px 40px;display:flex;flex-direction:column;gap:20px;animation:fadeUp .4s ease both;">
+  <div style="display:flex;align-items:center;gap:11px;">
+    <div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0ea5e9,#14b8a6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:13px;">DIT</div>
+    <span style="font-size:13px;font-weight:800;color:#64748b;">Category complete</span>
+  </div>
+
+  <div style="background:#fff;border-radius:26px;padding:30px 24px;box-shadow:0 18px 40px -22px rgba(2,132,199,.4);text-align:center;">
+    <div style="font-size:14px;font-weight:800;color:#64748b;letter-spacing:.02em;">{{ summaryCatName }}</div>
+    <div style="{{ ringStyle }}">
+      <span style="font-size:38px;font-weight:900;color:#0f172a;line-height:1;">{{ summaryPct }}<span style="font-size:20px;">%</span></span>
+    </div>
+    <div style="font-size:17px;font-weight:900;color:#0f172a;margin-top:6px;">{{ summaryScore }} / {{ summaryTotal }} correct</div>
+    <div style="{{ summaryMsgStyle }}">{{ summaryMessage }}</div>
+    <sc-if value="{{ showBestStreak }}" hint-placeholder-val="{{ false }}">
+      <div style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:900;color:#b45309;background:#fff7ed;border:1px solid #fed7aa;border-radius:999px;padding:7px 13px;">🔥 Best streak: {{ bestStreakSummary }}</div>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ hasWrong }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;flex-direction:column;gap:11px;">
+      <span style="font-size:14px;font-weight:900;color:#0f172a;padding-left:4px;">Review · {{ wrongCount }} to revisit</span>
+      <sc-for list="{{ summaryWrong }}" as="w" hint-placeholder-count="2">
+        <div style="background:#fff;border:1px solid #fee2e2;border-radius:18px;padding:16px 17px;display:flex;flex-direction:column;gap:9px;">
+          <div style="font-size:15px;font-weight:900;color:#0f172a;line-height:1.35;">{{ w.question }}</div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13.5px;font-weight:800;color:#dc2626;"><span>✗</span><span style="flex:1;">Your answer: {{ w.yourText }}</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:13.5px;font-weight:800;color:#059669;"><span>✓</span><span style="flex:1;">Correct: {{ w.correctText }}</span></div>
+          <div style="font-size:13.5px;font-weight:700;color:#475569;line-height:1.5;background:#f8fafc;border-radius:12px;padding:10px 12px;">{{ w.explanation }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </sc-if>
+
+  <div style="display:flex;gap:11px;">
+    <button onClick="{{ onRetake }}" style="flex:1;border:1px solid #bae6fd;background:#f0f9ff;color:#0369a1;font-family:inherit;font-weight:900;font-size:15px;padding:15px;border-radius:15px;cursor:pointer;">↻ Retake</button>
+    <button onClick="{{ onContinue }}" style="flex:1.4;border:none;background:linear-gradient(135deg,#0ea5e9,#0891b2);color:#fff;font-family:inherit;font-weight:900;font-size:15px;padding:15px;border-radius:15px;cursor:pointer;box-shadow:0 12px 24px -10px rgba(8,145,178,.7);">{{ continueLabel }}</button>
+  </div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isFinal }}" hint-placeholder-val="{{ false }}">
+<div style="padding:22px 20px 40px;display:flex;flex-direction:column;gap:20px;animation:fadeUp .4s ease both;">
+  <div style="display:flex;align-items:center;gap:11px;">
+    <div style="width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0ea5e9,#14b8a6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:13px;">DIT</div>
+    <span style="font-size:13px;font-weight:800;color:#64748b;">Final results</span>
+  </div>
+
+  <div style="background:linear-gradient(160deg,#0ea5e9,#0891b2 60%,#0e7490);border-radius:28px;padding:32px 24px;text-align:center;box-shadow:0 22px 46px -20px rgba(8,145,178,.75);">
+    <div style="font-size:46px;line-height:1;animation:floaty 3s ease-in-out infinite;">{{ finalEmoji }}</div>
+    <div style="font-size:13px;font-weight:800;color:#e0f2fe;letter-spacing:.06em;text-transform:uppercase;margin-top:12px;">Total Score</div>
+    <div style="font-size:52px;font-weight:900;color:#fff;line-height:1;margin-top:4px;">{{ finalScore }}<span style="font-size:26px;opacity:.8;">/{{ finalTotal }}</span></div>
+    <div style="font-size:19px;font-weight:900;color:#fff;margin-top:6px;">{{ finalPct }}%</div>
+    <div style="font-size:14px;font-weight:800;color:#cffafe;margin-top:10px;line-height:1.45;">{{ finalMessage }}</div>
+    <div style="display:inline-block;margin-top:14px;font-size:12.5px;font-weight:800;color:#0e7490;background:#ecfeff;border-radius:999px;padding:6px 13px;">⏱ Time used: {{ timeUsed }}</div>
+  </div>
+
+  <div style="background:#fff;border-radius:22px;padding:18px 18px;box-shadow:0 14px 36px -24px rgba(2,132,199,.4);display:flex;flex-direction:column;gap:15px;">
+    <span style="font-size:14px;font-weight:900;color:#0f172a;">Category breakdown</span>
+    <sc-for list="{{ finalBreakdown }}" as="b" hint-placeholder-count="4">
+      <div style="display:flex;flex-direction:column;gap:7px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+          <span style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800;color:#334155;"><span style="{{ b.dotStyle }}"></span>{{ b.name }}</span>
+          <span style="font-size:13.5px;font-weight:900;color:#0f172a;">{{ b.label }}</span>
+        </div>
+        <div style="height:8px;background:#eef2f6;border-radius:999px;overflow:hidden;">
+          <div style="{{ b.fillStyle }}"></div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <button onClick="{{ onRestart }}" style="border:none;background:#0f172a;color:#fff;font-family:inherit;font-weight:900;font-size:15px;padding:16px;border-radius:15px;cursor:pointer;">↻ Restart full test</button>
+</div>
+</sc-if>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;questionsPerCategory&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;min&quot;:5,&quot;max&quot;:30,&quot;tsType&quot;:&quot;number&quot;},&quot;timerMinutes&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:30,&quot;min&quot;:5,&quot;max&quot;:60,&quot;tsType&quot;:&quot;number&quot;}}">
+const CAT_META = [
+  { color: '#0ea5e9', soft: '#e0f2fe', icon: '🌍' },
+  { color: '#14b8a6', soft: '#ccfbf1', icon: '🫀' },
+  { color: '#06b6d4', soft: '#cffafe', icon: '📊' },
+  { color: '#3b82f6', soft: '#dbeafe', icon: '🧮' },
+];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ready: !!window.QUIZ_DATA,
+      screen: 'home',
+      catIndex: 0,
+      qIndex: 0,
+      sessions: {},
+      answers: {},
+      results: {},
+      streak: 0,
+      bestStreak: 0,
+      timeLeft: (props && props.timerMinutes ? props.timerMinutes : 30) * 60,
+      testStarted: false,
+    };
+    this.audioCtx = null;
+    this._tick = null;
+    this._waiter = null;
+  }
+
+  componentDidMount() {
+    if (!window.QUIZ_DATA) {
+      this._waiter = setInterval(() => {
+        if (window.QUIZ_DATA) { clearInterval(this._waiter); this.setState({ ready: true }); }
+      }, 60);
+    }
+    this._tick = setInterval(() => {
+      const s = this.state;
+      if (!s.testStarted || s.screen !== 'quiz' || s.timeLeft <= 0) return;
+      if (s.answers[s.catIndex + ':' + s.qIndex]) return; // paused while explanation shown
+      this.setState(st => {
+        const t = st.timeLeft - 1;
+        if (t <= 0) return { timeLeft: 0, screen: 'final' };
+        return { timeLeft: t };
+      });
+    }, 1000);
+  }
+  componentWillUnmount() { clearInterval(this._tick); clearInterval(this._waiter); }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.screen === 'summary' && prevState.screen !== 'summary') {
+      const sc = this.scoreFor(this.state.catIndex);
+      if (sc.total > 0 && sc.correct === sc.total) this.fireConfetti();
+    }
+    if (this.state.screen === 'final' && prevState.screen !== 'final') {
+      const f = this.computeFinal();
+      if (f.total > 0 && f.score === f.total) this.fireConfetti();
+    }
+  }
+
+  perCat() { return Math.max(1, this.props.questionsPerCategory || 15); }
+  timerMin() { return Math.max(1, this.props.timerMinutes || 30); }
+
+  shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  sampleQuestions(ci) {
+    const qs = window.QUIZ_DATA.categories[ci].questions.slice();
+    return this.shuffle(qs).slice(0, Math.min(this.perCat(), qs.length));
+  }
+  shortName(name) { const p = name.split(/[–—-]/); return p.length > 1 ? p.slice(1).join('-').trim() : name.trim(); }
+
+  scoreFor(ci) {
+    const sess = this.state.sessions[ci] || [];
+    let correct = 0, answered = 0;
+    sess.forEach((q, i) => { const a = this.state.answers[ci + ':' + i]; if (a) { answered++; if (a === q.correct) correct++; } });
+    return { correct, answered, total: sess.length };
+  }
+  computeFinal() {
+    let score = 0, total = 0;
+    Object.keys(this.state.sessions).forEach(k => { const sc = this.scoreFor(+k); score += sc.correct; total += sc.total; });
+    return { score, total };
+  }
+
+  // ---- audio ----
+  ensureAudio() {
+    if (!this.audioCtx) { try { this.audioCtx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} }
+    if (this.audioCtx && this.audioCtx.state === 'suspended') this.audioCtx.resume();
+  }
+  tone(freq, start, dur, type, gain) {
+    const ctx = this.audioCtx; if (!ctx) return;
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type; o.frequency.value = freq; o.connect(g); g.connect(ctx.destination);
+    const t0 = ctx.currentTime + start;
+    g.gain.setValueAtTime(0.0001, t0);
+    g.gain.exponentialRampToValueAtTime(gain, t0 + 0.025);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    o.start(t0); o.stop(t0 + dur + 0.02);
+  }
+  playCorrect() { this.ensureAudio(); this.tone(587.33, 0, 0.16, 'sine', 0.2); this.tone(880, 0.085, 0.22, 'sine', 0.2); this.tone(1174.66, 0.17, 0.2, 'sine', 0.14); }
+  playWrong() { this.ensureAudio(); this.tone(207.65, 0, 0.22, 'sawtooth', 0.13); this.tone(155.56, 0.1, 0.28, 'sawtooth', 0.13); }
+
+  fireConfetti() {
+    if (!window.confetti) return;
+    const colors = ['#0ea5e9', '#06b6d4', '#14b8a6', '#f59e0b', '#10b981'];
+    window.confetti({ particleCount: 130, spread: 78, startVelocity: 42, origin: { y: 0.55 }, colors });
+    setTimeout(() => window.confetti({ particleCount: 70, angle: 60, spread: 75, origin: { x: 0, y: 0.65 }, colors }), 180);
+    setTimeout(() => window.confetti({ particleCount: 70, angle: 120, spread: 75, origin: { x: 1, y: 0.65 }, colors }), 340);
+  }
+
+  // ---- actions ----
+  startCategory(ci) {
+    this.ensureAudio();
+    this.setState(s => {
+      const sessions = { ...s.sessions };
+      if (!sessions[ci]) sessions[ci] = this.sampleQuestions(ci);
+      return { screen: 'quiz', catIndex: ci, qIndex: 0, sessions, testStarted: true, streak: 0 };
+    });
+  }
+  selectAnswer(letter) {
+    const { catIndex, qIndex } = this.state;
+    const key = catIndex + ':' + qIndex;
+    if (this.state.answers[key]) return;
+    const q = this.state.sessions[catIndex][qIndex];
+    const ok = letter === q.correct;
+    this.setState(s => {
+      const streak = ok ? s.streak + 1 : 0;
+      return { answers: { ...s.answers, [key]: letter }, streak, bestStreak: Math.max(s.bestStreak, streak) };
+    });
+    ok ? this.playCorrect() : this.playWrong();
+  }
+  next() {
+    const { catIndex, qIndex, sessions } = this.state;
+    if (qIndex < sessions[catIndex].length - 1) { this.setState({ qIndex: qIndex + 1 }); }
+    else {
+      const sc = this.scoreFor(catIndex);
+      this.setState(s => ({ screen: 'summary', results: { ...s.results, [catIndex]: { score: sc.correct, total: sc.total } } }));
+    }
+  }
+  prev() { if (this.state.qIndex > 0) this.setState({ qIndex: this.state.qIndex - 1 }); }
+  goHome() { this.setState({ screen: 'home' }); }
+  retake(ci) {
+    this.setState(s => {
+      const sessions = { ...s.sessions }; sessions[ci] = this.sampleQuestions(ci);
+      const answers = { ...s.answers }; Object.keys(answers).forEach(k => { if (k.indexOf(ci + ':') === 0) delete answers[k]; });
+      const results = { ...s.results }; delete results[ci];
+      return { sessions, answers, results, screen: 'quiz', catIndex: ci, qIndex: 0, streak: 0 };
+    });
+  }
+  resetAll() {
+    this.setState({ screen: 'home', sessions: {}, answers: {}, results: {}, streak: 0, bestStreak: 0, testStarted: false, timeLeft: this.timerMin() * 60, catIndex: 0, qIndex: 0 });
+  }
+  fmt(sec) { const m = Math.floor(sec / 60), s = sec % 60; return m + ':' + (s < 10 ? '0' : '') + s; }
+
+  timerVisual(answeredNow) {
+    const t = this.state.timeLeft;
+    let style;
+    if (t <= 60) style = { background: '#fef2f2', color: '#dc2626', border: '1px solid #fecaca' };
+    else if (answeredNow) style = { background: '#fffbeb', color: '#b45309', border: '1px solid #fde68a' };
+    else style = { background: '#f0f9ff', color: '#0369a1', border: '1px solid #bae6fd' };
+    return { ...style, display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 900, fontSize: '14px', padding: '8px 13px', borderRadius: '999px', fontVariantNumeric: 'tabular-nums' };
+  }
+
+  renderVals() {
+    const st = this.state;
+    const D = window.QUIZ_DATA;
+    const out = {
+      isHome: st.screen === 'home', isQuiz: st.screen === 'quiz', isSummary: st.screen === 'summary', isFinal: st.screen === 'final',
+      perCat: this.perCat(), timerMin: this.timerMin(), totalCats: D ? D.categories.length : 4,
+      testStarted: st.testStarted, completedCount: Object.keys(st.results).length,
+      timerDisplay: this.fmt(st.timeLeft),
+    };
+
+    // ---- HOME ----
+    out.categories = D ? D.categories.map((c, i) => {
+      const m = CAT_META[i % CAT_META.length];
+      const res = st.results[i]; const inProg = st.sessions[i] && !res;
+      let statusText, statusColor;
+      if (res) { statusText = '✓ Completed · ' + res.score + '/' + res.total; statusColor = '#059669'; }
+      else if (inProg) { statusText = 'In progress…'; statusColor = '#b45309'; }
+      else { statusText = Math.min(this.perCat(), c.questions.length) + ' questions'; statusColor = '#94a3b8'; }
+      return {
+        index: i, shortName: this.shortName(c.name), icon: m.icon, arrow: res ? '✓' : '›',
+        statusText,
+        statusStyle: { fontSize: '13px', fontWeight: 800, color: statusColor },
+        onStart: () => this.startCategory(i),
+        cardStyle: { display: 'flex', alignItems: 'center', gap: '14px', width: '100%', background: '#fff', border: '1px solid ' + (res ? '#bbf7d0' : '#e8eef4'), borderRadius: '20px', padding: '15px 16px', cursor: 'pointer', fontFamily: 'inherit', textAlign: 'left', boxShadow: '0 10px 26px -20px rgba(2,132,199,.5)', transition: 'transform .15s ease, box-shadow .15s ease' },
+        cardHover: { transform: 'translateY(-2px)', boxShadow: '0 16px 30px -18px rgba(2,132,199,.6)' },
+        iconStyle: { width: '46px', height: '46px', flex: '0 0 46px', borderRadius: '14px', background: m.soft, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '23px' },
+        arrowStyle: { width: '28px', height: '28px', flex: '0 0 28px', borderRadius: '999px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: res ? '13px' : '20px', fontWeight: 900, color: res ? '#fff' : m.color, background: res ? '#10b981' : m.soft },
+      };
+    }) : [];
+    out.anyCompleted = Object.keys(st.results).length > 0 || st.testStarted;
+    out.onReset = () => this.resetAll();
+    out.onFinishTest = () => this.setState({ screen: 'final' });
+
+    // ---- QUIZ ----
+    if (st.screen === 'quiz' && st.sessions[st.catIndex]) {
+      const sess = st.sessions[st.catIndex];
+      const q = sess[st.qIndex];
+      const key = st.catIndex + ':' + st.qIndex;
+      const selected = st.answers[key];
+      const answered = !!selected;
+      out.answered = answered;
+      out.catName = this.shortName(D.categories[st.catIndex].name);
+      out.qNum = st.qIndex + 1; out.qTotal = sess.length;
+      out.streak = st.streak; out.streakVisible = st.streak >= 2;
+      out.questionText = q.question;
+      out.cardKey = st.catIndex + '-' + st.qIndex;
+      out.timerPillStyle = this.timerVisual(answered);
+      out.timerIcon = answered ? '⏸' : '⏱';
+      const pct = Math.round(((st.qIndex + (answered ? 1 : 0)) / sess.length) * 100);
+      out.progressFillStyle = { height: '100%', width: Math.max(4, pct) + '%', borderRadius: '999px', background: 'linear-gradient(90deg,#0ea5e9,#14b8a6)', transition: 'width .45s cubic-bezier(.4,0,.2,1)' };
+
+      out.optionList = ['A', 'B', 'C', 'D'].filter(L => q.options[L] != null).map(L => {
+        const isCorrect = L === q.correct;
+        const isSel = L === selected;
+        let bg = '#fff', border = '#e3eaf1', op = 1, letterBg = '#f1f5f9', letterColor = '#64748b', icon = '', iconColor = '#fff';
+        if (answered) {
+          if (isCorrect) { bg = '#f0fdf4'; border = '#86efac'; letterBg = '#10b981'; letterColor = '#fff'; icon = '✓'; iconColor = '#059669'; }
+          else if (isSel) { bg = '#fef2f2'; border = '#fca5a5'; letterBg = '#ef4444'; letterColor = '#fff'; icon = '✗'; iconColor = '#dc2626'; }
+          else { op = 0.5; }
+        }
+        return {
+          letter: L, text: q.options[L], icon, disabled: answered,
+          onClick: () => this.selectAnswer(L),
+          style: { display: 'flex', alignItems: 'center', gap: '13px', width: '100%', background: bg, border: '2px solid ' + border, borderRadius: '16px', padding: '14px 15px', cursor: answered ? 'default' : 'pointer', fontFamily: 'inherit', fontSize: '15.5px', fontWeight: 800, color: '#1e293b', opacity: op, transition: 'all .2s ease', textAlign: 'left' },
+          letterStyle: { width: '30px', height: '30px', flex: '0 0 30px', borderRadius: '9px', background: letterBg, color: letterColor, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '14px', fontWeight: 900 },
+          iconStyle: { width: '20px', textAlign: 'center', fontSize: '17px', fontWeight: 900, color: iconColor },
+        };
+      });
+
+      if (answered) {
+        const ok = selected === q.correct;
+        out.explStyle = { marginTop: '18px', borderRadius: '16px', padding: '15px 16px', background: ok ? '#f0fdf4' : '#eff6ff', border: '1px solid ' + (ok ? '#bbf7d0' : '#bfdbfe') };
+        out.explTitleStyle = { fontSize: '14px', fontWeight: 900, color: ok ? '#059669' : '#0369a1', display: 'flex', alignItems: 'center', gap: '6px' };
+        out.explIcon = ok ? '🎉' : '💡';
+        out.explTitle = ok ? 'Correct!' : 'Correct answer: ' + q.correct + ') ' + q.options[q.correct];
+        out.explanationText = q.correct_detail || q.options[q.correct];
+      }
+
+      out.hasPrev = st.qIndex > 0;
+      out.onPrev = () => this.prev();
+      out.onNext = () => this.next();
+      out.onHome = () => this.goHome();
+      out.nextDisabled = !answered;
+      out.nextLabel = st.qIndex === sess.length - 1 ? 'Finish category ✓' : 'Next ›';
+      out.nextStyle = { flex: 1, border: 'none', fontFamily: 'inherit', fontWeight: 900, fontSize: '15px', padding: '15px', borderRadius: '15px', cursor: answered ? 'pointer' : 'not-allowed', color: '#fff', background: answered ? 'linear-gradient(135deg,#0ea5e9,#0891b2)' : '#cbd5e1', boxShadow: answered ? '0 12px 24px -10px rgba(8,145,178,.7)' : 'none', transition: 'all .2s ease' };
+    } else if (st.screen === 'quiz') {
+      out.timerPillStyle = this.timerVisual(false); out.timerIcon = '⏱';
+      out.optionList = []; out.onHome = () => this.goHome();
+    }
+
+    // ---- SUMMARY ----
+    if (st.screen === 'summary') {
+      const ci = st.catIndex; const sc = this.scoreFor(ci); const sess = st.sessions[ci] || [];
+      const pct = sc.total ? Math.round((sc.correct / sc.total) * 100) : 0;
+      out.summaryCatName = this.shortName(D.categories[ci].name);
+      out.summaryScore = sc.correct; out.summaryTotal = sc.total; out.summaryPct = pct;
+      const ringColor = pct >= 80 ? '#10b981' : pct >= 50 ? '#0ea5e9' : '#f59e0b';
+      out.ringStyle = { width: '128px', height: '128px', borderRadius: '999px', margin: '18px auto 4px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'conic-gradient(' + ringColor + ' ' + (pct * 3.6) + 'deg, #eef2f6 0deg)' , position: 'relative' };
+      out.ringStyle = { ...out.ringStyle };
+      // inner white circle via box-shadow trick won't work; use padding ring
+      out.ringStyle = { width: '128px', height: '128px', borderRadius: '999px', margin: '18px auto 4px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'conic-gradient(' + ringColor + ' ' + (pct * 3.6) + 'deg, #eef2f6 0deg)', boxShadow: 'inset 0 0 0 14px #fff' };
+      let msg, msgColor;
+      if (pct === 100) { msg = 'Flawless! Every answer correct. 🏆'; msgColor = '#059669'; }
+      else if (pct >= 80) { msg = 'Excellent work — strong command of this topic.'; msgColor = '#0369a1'; }
+      else if (pct >= 50) { msg = 'Solid effort. Review the misses below to sharpen up.'; msgColor = '#0369a1'; }
+      else { msg = 'Keep going — the explanations below will help.'; msgColor = '#b45309'; }
+      out.summaryMessage = msg;
+      out.summaryMsgStyle = { fontSize: '14px', fontWeight: 800, color: msgColor, marginTop: '8px', lineHeight: 1.45, padding: '0 6px' };
+      out.showBestStreak = st.bestStreak >= 3; out.bestStreakSummary = st.bestStreak;
+      const wrong = sess.map((q, i) => ({ q, i, sel: st.answers[ci + ':' + i] })).filter(x => x.sel && x.sel !== x.q.correct);
+      out.hasWrong = wrong.length > 0; out.wrongCount = wrong.length;
+      out.summaryWrong = wrong.map(x => ({
+        question: x.q.question,
+        yourText: x.sel + ') ' + x.q.options[x.sel],
+        correctText: x.q.correct + ') ' + x.q.options[x.q.correct],
+        explanation: x.q.correct_detail || x.q.options[x.q.correct],
+      }));
+      out.onRetake = () => this.retake(ci);
+      const allDone = D && Object.keys(st.results).length >= D.categories.length;
+      out.continueLabel = allDone ? 'See final results 🏆' : 'Back to categories ›';
+      out.onContinue = () => this.setState({ screen: allDone ? 'final' : 'home' });
+    }
+
+    // ---- FINAL ----
+    if (st.screen === 'final') {
+      const f = this.computeFinal();
+      const pct = f.total ? Math.round((f.score / f.total) * 100) : 0;
+      out.finalScore = f.score; out.finalTotal = f.total; out.finalPct = pct;
+      out.finalEmoji = pct === 100 ? '🏆' : pct >= 80 ? '🌟' : pct >= 50 ? '👏' : '📈';
+      let msg;
+      if (pct === 100) msg = 'Perfect score across the board — outstanding!';
+      else if (pct >= 80) msg = 'Excellent overall performance.';
+      else if (pct >= 50) msg = 'Good work — review weaker categories to improve.';
+      else msg = 'A solid start. Revisit the explanations and try again.';
+      out.finalMessage = msg;
+      out.timeUsed = this.fmt(this.timerMin() * 60 - st.timeLeft);
+      out.finalBreakdown = (D ? D.categories : []).map((c, i) => {
+        const sc = this.scoreFor(i); const m = CAT_META[i % CAT_META.length];
+        const p = sc.total ? Math.round((sc.correct / sc.total) * 100) : 0;
+        const attempted = !!st.sessions[i];
+        return {
+          name: this.shortName(c.name),
+          label: attempted ? sc.correct + '/' + sc.total : 'Skipped',
+          dotStyle: { width: '11px', height: '11px', flex: '0 0 11px', borderRadius: '999px', background: attempted ? m.color : '#cbd5e1' },
+          fillStyle: { height: '100%', width: (attempted ? Math.max(3, p) : 0) + '%', borderRadius: '999px', background: 'linear-gradient(90deg,' + m.color + ',#14b8a6)' },
+        };
+      });
+      out.onRestart = () => this.resetAll();
+    }
+
+    return out;
+  }
+}
+</script>
+</body>
+</html>
