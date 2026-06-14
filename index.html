@@ -19,6 +19,9 @@
   @keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
   @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
   ::-webkit-scrollbar { width: 0; height: 0; }
+  input[type=number].per-cat-input::-webkit-outer-spin-button,
+  input[type=number].per-cat-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number].per-cat-input { -moz-appearance: textfield; appearance: textfield; }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <script>
@@ -68,9 +71,15 @@
     <p style="font-size:15px;color:#475569;margin:11px 0 0;font-weight:700;line-height:1.5;">Pick any category to begin. {{ perCat }} questions each, instant feedback, and one {{ timerMin }}-minute clock for the whole test.</p>
   </div>
 
-  <div style="display:flex;gap:9px;flex-wrap:wrap;">
+  <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center;">
     <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;color:#0369a1;background:#e0f2fe;border-radius:999px;padding:7px 13px;">⏱ {{ timerMin }} min total</span>
     <span style="display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:800;color:#0f766e;background:#ccfbf1;border-radius:999px;padding:7px 13px;">📚 {{ totalCats }} categories</span>
+    <span style="{{ perCatStepperStyle }}">
+      <span style="font-size:12.5px;font-weight:800;color:#6d28d9;white-space:nowrap;">📝 per category</span>
+      <button onClick="{{ onDecPerCat }}" disabled="{{ perCatDecDisabled }}" style="{{ perCatDecBtnStyle }}">−</button>
+      <input type="number" class="per-cat-input" value="{{ questionsPerCat }}" onChange="{{ onPerCatInput }}" onBlur="{{ onPerCatBlur }}" disabled="{{ perCatLocked }}" min="{{ perCatMin }}" max="{{ perCatMax }}" style="{{ perCatInputStyle }}" />
+      <button onClick="{{ onIncPerCat }}" disabled="{{ perCatIncDisabled }}" style="{{ perCatIncBtnStyle }}">+</button>
+    </span>
   </div>
 
   <div style="display:flex;flex-direction:column;gap:13px;">
@@ -317,13 +326,15 @@
 </div>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;questionsPerCategory&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:15,&quot;min&quot;:5,&quot;max&quot;:30,&quot;tsType&quot;:&quot;number&quot;},&quot;timerMinutes&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:30,&quot;min&quot;:5,&quot;max&quot;:60,&quot;tsType&quot;:&quot;number&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;questionsPerCategory&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:20,&quot;min&quot;:5,&quot;max&quot;:30,&quot;tsType&quot;:&quot;number&quot;},&quot;timerMinutes&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:30,&quot;min&quot;:5,&quot;max&quot;:60,&quot;tsType&quot;:&quot;number&quot;}}">
 const CAT_META = [
   { color: '#0ea5e9', soft: '#e0f2fe', icon: '🌍' },
   { color: '#14b8a6', soft: '#ccfbf1', icon: '🫀' },
   { color: '#06b6d4', soft: '#cffafe', icon: '📊' },
   { color: '#3b82f6', soft: '#dbeafe', icon: '🧮' },
 ];
+const PER_CAT_MIN = 5;
+const PER_CAT_MAX = 30;
 
 class Component extends DCLogic {
   constructor(props) {
@@ -342,6 +353,7 @@ class Component extends DCLogic {
       testStarted: false,
       bankCatIndex: 0,
       bankSearch: '',
+      questionsPerCat: Math.max(PER_CAT_MIN, Math.min(PER_CAT_MAX, (props && props.questionsPerCategory) ? props.questionsPerCategory : 20)),
     };
     this.audioCtx = null;
     this._tick = null;
@@ -378,8 +390,26 @@ class Component extends DCLogic {
     }
   }
 
-  perCat() { return Math.max(1, this.props.questionsPerCategory || 15); }
+  perCat() { return Math.max(PER_CAT_MIN, Math.min(PER_CAT_MAX, this.state.questionsPerCat || 20)); }
   timerMin() { return Math.max(1, this.props.timerMinutes || 30); }
+  clampPerCat(n) { return Math.max(PER_CAT_MIN, Math.min(PER_CAT_MAX, Math.round(Number(n) || PER_CAT_MIN))); }
+  setPerCat(n) {
+    if (this.state.testStarted) return;
+    this.setState({ questionsPerCat: this.clampPerCat(n) });
+  }
+  decPerCat() { this.setPerCat(this.perCat() - 1); }
+  incPerCat() { this.setPerCat(this.perCat() + 1); }
+  onPerCatInput(e) {
+    if (this.state.testStarted) return;
+    const raw = e.target.value;
+    if (raw === '') { this.setState({ questionsPerCat: '' }); return; }
+    const n = parseInt(raw, 10);
+    if (!isNaN(n)) this.setState({ questionsPerCat: n });
+  }
+  onPerCatBlur(e) {
+    if (this.state.testStarted) return;
+    this.setPerCat(e.target.value === '' ? 20 : e.target.value);
+  }
 
   shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
   sampleQuestions(ci) {
@@ -491,6 +521,19 @@ class Component extends DCLogic {
       perCat: this.perCat(), timerMin: this.timerMin(), totalCats: D ? D.categories.length : 4,
       testStarted: st.testStarted, completedCount: Object.keys(st.results).length,
       timerDisplay: this.fmt(st.timeLeft),
+      questionsPerCat: st.questionsPerCat === '' ? '' : this.perCat(),
+      perCatMin: PER_CAT_MIN, perCatMax: PER_CAT_MAX,
+      perCatLocked: st.testStarted,
+      perCatDecDisabled: st.testStarted || this.perCat() <= PER_CAT_MIN,
+      perCatIncDisabled: st.testStarted || this.perCat() >= PER_CAT_MAX,
+      perCatStepperStyle: { display: 'inline-flex', alignItems: 'center', gap: '6px', background: st.testStarted ? '#f1f5f9' : '#ede9fe', borderRadius: '999px', padding: '5px 8px 5px 13px', opacity: st.testStarted ? 0.72 : 1, transition: 'opacity .15s ease' },
+      perCatInputStyle: { width: '38px', height: '28px', border: '2px solid ' + (st.testStarted ? '#e2e8f0' : '#c4b5fd'), borderRadius: '9px', background: '#fff', color: '#5b21b6', fontFamily: 'inherit', fontSize: '14px', fontWeight: 900, textAlign: 'center', padding: '0 2px', fontVariantNumeric: 'tabular-nums', outline: 'none', cursor: st.testStarted ? 'not-allowed' : 'text' },
+      perCatDecBtnStyle: { width: '28px', height: '28px', border: 'none', borderRadius: '999px', background: st.testStarted || this.perCat() <= PER_CAT_MIN ? '#e2e8f0' : '#ddd6fe', color: st.testStarted || this.perCat() <= PER_CAT_MIN ? '#94a3b8' : '#5b21b6', fontFamily: 'inherit', fontSize: '18px', fontWeight: 900, lineHeight: 1, padding: 0, cursor: st.testStarted || this.perCat() <= PER_CAT_MIN ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' },
+      perCatIncBtnStyle: { width: '28px', height: '28px', border: 'none', borderRadius: '999px', background: st.testStarted || this.perCat() >= PER_CAT_MAX ? '#e2e8f0' : '#ddd6fe', color: st.testStarted || this.perCat() >= PER_CAT_MAX ? '#94a3b8' : '#5b21b6', fontFamily: 'inherit', fontSize: '18px', fontWeight: 900, lineHeight: 1, padding: 0, cursor: st.testStarted || this.perCat() >= PER_CAT_MAX ? 'not-allowed' : 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' },
+      onDecPerCat: () => this.decPerCat(),
+      onIncPerCat: () => this.incPerCat(),
+      onPerCatInput: (e) => this.onPerCatInput(e),
+      onPerCatBlur: (e) => this.onPerCatBlur(e),
     };
 
     // ---- HOME ----
