@@ -1950,6 +1950,54 @@
           },
           "correct": "B",
           "correct_detail": "Deaths = (rate per 1,000 / 1,000) × number of live births. Step 1: Rate = 60 per 1,000 = 0.06 (6%). Step 2: Deaths = 0.06 × 50,000 = 3,000 children per year. Answer: 3,000. Alternatively: 60/1,000 × 50,000 = 60 × 50 = 3,000. Under-5 mortality rate (U5MR) is one of the most important indicators of child health and overall development — a U5MR of 60/1,000 is typical of a lower-middle-income country. The global average is approximately 37/1,000 (2023)."
+        },
+        {
+          "id": "C4SDQ1",
+          "question": "In a health survey, the mean systolic blood pressure of a group is 125 mmHg with a standard deviation of 10 mmHg. What does the standard deviation tell us?",
+          "options": {
+            "A": "The average blood pressure across the group is 10 mmHg",
+            "B": "Most readings fall between 115 and 135 mmHg — showing how spread out the values are around the mean",
+            "C": "The maximum blood pressure recorded was 135 mmHg",
+            "D": "10% of people have abnormal blood pressure"
+          },
+          "correct": "B",
+          "correct_detail": "Standard deviation (SD) measures the spread of data around the mean. An SD of 10 mmHg means most values (approximately 68% in a normal distribution) fall within one SD of the mean — i.e. between 125 - 10 = 115 mmHg and 125 + 10 = 135 mmHg. A small SD means values are clustered tightly around the mean; a large SD means they are widely spread. SD does NOT mean the average is 10 or that the max is 135 — it describes variability, not a boundary."
+        },
+        {
+          "id": "C4SDQ2",
+          "question": "Two clinics measure patient waiting times. Clinic A: mean = 20 min, SD = 2 min. Clinic B: mean = 20 min, SD = 15 min. What does this tell us?",
+          "options": {
+            "A": "Clinic B is faster on average than Clinic A",
+            "B": "Clinic A has more consistent waiting times; Clinic B is far more variable",
+            "C": "Both clinics perform identically since their means are the same",
+            "D": "Clinic A has more patients than Clinic B"
+          },
+          "correct": "B",
+          "correct_detail": "Both clinics have the same mean waiting time (20 minutes), but very different standard deviations. Clinic A (SD = 2) has very consistent times — most patients wait close to 20 minutes. Clinic B (SD = 15) is highly variable — some patients may wait only 5 minutes while others wait 35 minutes or more. The mean alone does not tell the full story; SD reveals the reliability and consistency of a service. In public health, high variability in care delivery often indicates inequity or system inefficiency."
+        },
+        {
+          "id": "C4SDQ3",
+          "question": "A dataset of children's heights (cm) has a mean of 110 cm and SD of 5 cm. Approximately what percentage of children fall between 100 cm and 120 cm?",
+          "options": {
+            "A": "50%",
+            "B": "68%",
+            "C": "95%",
+            "D": "99.7%"
+          },
+          "correct": "C",
+          "correct_detail": "Using the 68-95-99.7 rule (Empirical Rule) for normal distributions: 68% of values fall within 1 SD of the mean (105–115 cm here). 95% fall within 2 SDs of the mean. 99.7% fall within 3 SDs. Here: 100 cm = 110 - 2×5 = mean - 2 SD. 120 cm = 110 + 2×5 = mean + 2 SD. So the range 100–120 cm represents mean ± 2 SD → approximately 95% of children. This rule is essential for interpreting population health data and reference ranges."
+        },
+        {
+          "id": "C4SDQ4",
+          "question": "Which of the following statements about standard deviation is TRUE?",
+          "options": {
+            "A": "A higher SD always means the data is more accurate",
+            "B": "SD can never be zero",
+            "C": "SD measures how spread out values are around the mean",
+            "D": "SD and mean always have the same numerical value"
+          },
+          "correct": "C",
+          "correct_detail": "Standard deviation (SD) measures the dispersion or spread of data values around the mean. Option A is FALSE — a higher SD means more variability, not more accuracy; in fact high variability can indicate inconsistency. Option B is FALSE — SD = 0 when all values are identical (e.g. everyone scored exactly 50). Option D is FALSE — mean and SD are independent measures; they can be any values. SD is one of the most important descriptive statistics in public health and clinical research."
         }
       ]
     }
